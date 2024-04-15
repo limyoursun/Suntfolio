@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "category": "기상청",
+    "name": "사용자 맞춤형 지진정보서비스",
+    "description": "기상청에서 제공하는 실시간 지진감지 서비스 페이지입니다. 2021년부터 약 3년 간 기능 추가 및 유지보수를 담당하였습니다.",
+    "skill": ["html", "css", "jquery"],
+    "image": "이미지~",
+    "demo": "https://www.weather.go.kr/pews/"
+  },
+  {
+    "id": 2,
+    "category": "",
+    "name": "Makergallery",
+    "description": "메이커빌 근무 당시 제작한 쇼핑몰 사이트입니다.",
+    "skill": ["html", "scss", "jquery", "swiper-js"],
+    "image": "이미지~",
+    "memoir": "https://makergallery.co.kr/mw/main/index.do",
+    "demo": "https://makergallery.co.kr/mw/main/index.do"
+  },
+  {
+    "id": 3,
+    "category": "",
+    "name": "Makergallery Back-office",
+    "description": "메이커빌 근무 당시 제작한 쇼핑몰 사이트인 메이커갤러리의 백오피스입니다.",
+    "skill": ["html", "scss", "jquery", "chart-js"],
+    "image": "이미지~",
+    "memoir": "https://makergallery.co.kr/mw/main/index.do"
+  },
+  {
+    "id": 4,
+    "category": "",
+    "name": "Simple-note",
+    "description": "리액트 토이프로젝트 Simple-note App입니다.",
+    "skill": ["react", "redux", "styled-componets", "localhost", "uuid", "moment-js"],
+    "image": "이미지~",
+    "memoir": "https://heeeming.tistory.com/11",
+    "source_code": "https://github.com/heeaepark/simple-note-app",
+    "demo": "https://heeaepark.github.io/simple-note/"
+  },
+  {
+    "id": 5,
+    "category": "",
+    "name": "VScode Portfolio",
+    "description": "VScode 스타일의 포트폴리오입니다. (2022 ver)",
+    "skill": ["react", "css-module","axios", "ajax", "open-API"],
+    "image": "이미지~",
+    "memoir": "",
+    "source_code": "https://github.com/heeaepark/portfolio-vscode",
+    "demo": ""
+  }
+]
