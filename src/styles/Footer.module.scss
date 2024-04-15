@@ -1,0 +1,12 @@
+Footer {
+  height:30px;
+  background-color: var(--bg--list);
+  color: var(--color--list);
+  line-height:30px;
+  text-align: center;
+
+  small {
+    color: var(--color--list);
+    font-size: 16px;
+  }
+}

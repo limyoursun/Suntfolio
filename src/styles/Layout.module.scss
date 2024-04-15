@@ -1,3 +1,6 @@
 @charset "utf-8";
 
-*{background-color:aquamarine;}
+main {
+  height: calc(100vh - 80px);
+  background-color: var(--bg--list);
+}

@@ -1,1 +1,11 @@
-*{background-color:pink;}
+header {
+  height: 50px;
+  background-color: var(--bg--list);
+  text-align: center;
+
+  h1 {
+    font-size: 0;
+
+    img {}
+  }
+}

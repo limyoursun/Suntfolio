@@ -1,0 +1,24 @@
+/* var */
+:root {
+  --color--common: #222;
+  --color--list: #fff;
+  --bg--list: #333;
+  --shadow--list: #222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--color--common);
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
