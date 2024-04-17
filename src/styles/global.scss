@@ -3,6 +3,7 @@
   --color--common: #222;
   --color--list: #fff;
   --bg--list: #333;
+  --color--main: #999;
   --shadow--list: #222;
 }
 
@@ -21,4 +22,14 @@ li {
 
 a {
   text-decoration: none;
+}
+
+
+.btn_site {
+  display: block;
+  line-height:40px;
+  border-radius:7px;
+  background-color: var(--bg--list);
+  color: var(--color--list);
+  text-align:center;
 }

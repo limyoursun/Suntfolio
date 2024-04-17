@@ -6,24 +6,22 @@ import style from "../styles/Home.module.scss";
 function Project({ id, category, name, image, description, demo, test }) {
   return (
     <li key="project.id">
-      <div className={style.tumb}>
-        <img src={image} alt={name} />
+      <div className={style.tumb} style={{backgroundColor:`${name}`}}>
+        <img src={image} alt={name}/>
       </div>
-      <h2><Link to={`/project/${id}`}>{name}</Link></h2>
-      <Link to={demo}>{demo}</Link>
-      <ul>
-        {test.map((g) => ( 
-          <li key={g} className="box yellow">
-            {g}
-          </li>
-        ))}
-      </ul>
       <span>{category}</span>
+      <h2>{name}</h2>
       <p>
-        {description.length > 200
-          ? `${description.slice(0, 200)}`
+        {description.length > 100
+          ? `${description.slice(0, 100)}`
           : description}
       </p>
+      <ul>
+        {test.map((g) => (
+          <li key={g}>{g}</li>
+        ))}
+      </ul>
+        <Link to={`/${id}`} className="btn_site">Detail</Link>
     </li>
   );
 }
