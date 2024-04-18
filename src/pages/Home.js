@@ -1,18 +1,21 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 /* css import */
 import style from "../styles/Home.module.scss";
 
 /* component import */
 import Project from "../components/ProjectList";
+import Detail from "./Detail";
 
 function Home() {
   const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState([]);
+  
   const getProjects = async () => {
     const json = await (
       await fetch(
-        `https://raw.githubusercontent.com/limyoursun/api/main/projects.json`
+        `https://raw.githubusercontent.com/limyoursun/limyoursun.github.io/main/api/projects.json`
       )
     ).json();
     setProjects(json);
@@ -30,7 +33,6 @@ function Home() {
         <ul className={style.project}>
           {projects.map((project) => (
             <Project
-              key={project.id}
               id={project.id}
               category={project.category}
               name={project.name}

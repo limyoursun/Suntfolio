@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 /* css import */
 import style from "../styles/Home.module.scss";
 
-function Project({ id, category, name, image, description, demo, test }) {
+function Project({key, id, category, name, image, description, demo, test }) {
   return (
     <li key="project.id">
       <div className={style.tumb} style={{backgroundColor:`${name}`}}>
@@ -16,12 +16,12 @@ function Project({ id, category, name, image, description, demo, test }) {
           ? `${description.slice(0, 100)}`
           : description}
       </p>
-      <ul>
+      <ul className="builtwith_wrap">
         {test.map((g) => (
           <li key={g}>{g}</li>
         ))}
       </ul>
-        <Link to={`/${id}`} className="btn_site">Detail</Link>
+        <Link to={`detail/${id}`} className="btn_site">Detail</Link>
     </li>
   );
 }

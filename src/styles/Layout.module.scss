@@ -1,6 +1,8 @@
 @charset "utf-8";
 
 main {
+  width:1400px;
   height: calc(100vh - 80px);
-  background-color: var(--bg--list);
+  margin:0 auto;
+  padding:50px 0;
 }

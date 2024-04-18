@@ -1,10 +1,18 @@
 /* var */
 :root {
-  --color--common: #222;
+  --color--common: #333;
   --color--list: #fff;
   --bg--list: #333;
   --color--main: #999;
   --shadow--list: #222;
+  --bg--key: #ffe96c;
+  --bg--box: #ddd;
+}
+
+@font-face {
+  font-family: "GowunDodum-Regular";
+  font-weight: normal;
+  src: url("./../assets/font/PretendardVariable.ttf") format("truetype");
 }
 
 * {
@@ -12,6 +20,9 @@
   padding: 0;
   box-sizing: border-box;
   color: var(--color--common);
+  font-family: "GowunDodum-Regular";
+  font-size: 10px;
+  font-style: normal;
 }
 
 ul,
@@ -24,12 +35,55 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
 
+body {
+  background-color: var(--bg--list);
+}
+
+
+
+.builtwith_wrap {
+  display: flex;
+  gap: 3px;
+
+  li {
+    padding: 3px 5px;
+    border-radius: 5px;
+    background-color: var(--bg--box);
+    font-size: 1.4rem;
+    color: var(--color--main);
+  }
+}
+
+/* button */
 .btn_site {
   display: block;
-  line-height:40px;
-  border-radius:7px;
+  width: 100%;
+  line-height: 50px;
+  border-radius: 30px;
   background-color: var(--bg--list);
+  font-size: 1.7rem;
+  ;
   color: var(--color--list);
-  text-align:center;
+  text-align: center;
+}
+
+.btn_back {
+  margin-bottom: 10px;
+  border: none;
+  background-color: transparent;
+  font-size: 2.2rem;
+
+  .icon {
+    margin-bottom: -7px;
+  }
+
+}
+
+/* icon */
+.icon {
+  font-size: 3rem;
 }
