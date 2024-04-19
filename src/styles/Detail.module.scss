@@ -7,6 +7,9 @@ main:has(.detail_side) {
     border-radius: 15px;
     background-color: #fff;
   }
+  section:has(.detail_side){
+    align-self: start;
+  }
   .detail_side {
     width: 350px;
     align-self: baseline;

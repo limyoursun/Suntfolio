@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 /* css import */
 import style from "../styles/Detail.module.scss";
 
+/* icon import */
+import { PiCodeFill, PiPencilCircleFill } from "react-icons/pi";
+import { BiSolidBookmarkHeart } from "react-icons/bi";
+
 /* component import */
 import BtnBack from "../components/BtnBack";
 
@@ -36,7 +40,6 @@ function ProjectDetail({
           <Link to={demo} className="btn_site">VIEW</Link>
         </aside>
       </section>
-      {/* 
       <section className={style.detail_con}>
         <ul>
           <li>
@@ -57,7 +60,7 @@ function ProjectDetail({
           </li>
         </ul>
         <div></div>
-      </section> */}
+      </section>
     </>
   );
 }

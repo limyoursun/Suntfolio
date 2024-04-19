@@ -8,7 +8,7 @@ import style from "../styles/Detail.module.scss";
 import ProjectDetail from "../components/ProjectDetail";
 
 function Detail() {
-
+  const {id} = useParams();
   const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState([]);
   
@@ -30,8 +30,10 @@ function Detail() {
       {loading ? (
         <h1>Loading...</h1>
       ) : (
-        <ul className={style.project}>
-          {projects.map((project) => (
+        <>
+          {projects
+          .filter((selId) =>selId.id == id)
+          .map((project) => (
             <ProjectDetail
               id={project.id}
               category={project.category}
@@ -42,7 +44,7 @@ function Detail() {
               test={project.test}
             />
           ))}
-        </ul>
+        </>
       )}
     </>
   );

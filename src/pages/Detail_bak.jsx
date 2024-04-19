@@ -42,7 +42,6 @@ const Detail = () => {
             민주평화통일자문회의의 조직·직무범위 기타 필요한 사항은 법률로
             정한다.
           </p>
-
           <button type="button" className="btn_site">
             site visit
           </button>
