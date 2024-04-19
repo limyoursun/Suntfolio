@@ -8,8 +8,6 @@ import style from "../styles/Detail.module.scss";
 import ProjectDetail from "../components/ProjectDetail";
 
 function Detail() {
-  const id  = useParams();
-  console.log("ID : " + id);
 
   const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState([]);
@@ -27,25 +25,23 @@ function Detail() {
     getProjects();
   }, []);
 
-  const result = projects.filter(project => project.id === id);
-  console.log(result)
-  console.log(id)
-
   return (
     <>
       {loading ? (
         <h1>Loading...</h1>
       ) : (
         <ul className={style.project}>
+          {projects.map((project) => (
             <ProjectDetail
-              id={result.id}
-              category={result.category}
-              name={result.name}
-              image={result.image}
-              description={result.description}
-              demo={result.demo}
-              test={result.test}
+              id={project.id}
+              category={project.category}
+              name={project.name}
+              image={project.image}
+              description={project.description}
+              demo={project.demo}
+              test={project.test}
             />
+          ))}
         </ul>
       )}
     </>
