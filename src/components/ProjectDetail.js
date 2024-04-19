@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 
 /* css import */
-import style from "../styles/Home.module.scss";
 
-function Detail() {
+function ProjectDetail() {
   return (
-   <>
-   <div>엥?</div>
-   </>
+    <>
+      <div>엥?</div>
+    </>
   );
 }
 
-export default Detail;
+export default ProjectDetail;

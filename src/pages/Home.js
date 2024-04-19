@@ -6,7 +6,6 @@ import style from "../styles/Home.module.scss";
 
 /* component import */
 import Project from "../components/ProjectList";
-import Detail from "./Detail";
 
 function Home() {
   const [loading, setLoading] = useState(true);

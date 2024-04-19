@@ -4,25 +4,51 @@ import { useParams } from "react-router-dom";
 /* css import */
 import style from "../styles/Detail.module.scss";
 
-const Detail = ({ projects }) => {
-  const { id } = useParams();
-  console.log("Index:", id);
+/* component import */
+import ProjectDetail from "../components/ProjectDetail";
 
-  // projects 배열이 초기에 undefined일 경우를 처리
-  if (!projects || projects.length === 0) {
-    return <div>Loading...</div>;
-  }
+function Detail() {
+  const id  = useParams();
+  console.log("ID : " + id);
 
-  // filter 함수를 사용하여 선택된 id와 일치하는 프로젝트를 찾음
-  const selectedProject = projects.filter(project => project.id === id)[0];
+  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState([]);
+  
+  const getProjects = async () => {
+    const json = await (
+      await fetch(
+        `https://raw.githubusercontent.com/limyoursun/limyoursun.github.io/main/api/projects.json`
+      )
+    ).json();
+    setProjects(json);
+    setLoading(false);
+  };
+  useEffect(() => {
+    getProjects();
+  }, []);
 
-  console.log(selectedProject);
+  const result = projects.filter(project => project.id === id);
+  console.log(result)
+  console.log(id)
 
   return (
-    <div>
-      
-    </div>
+    <>
+      {loading ? (
+        <h1>Loading...</h1>
+      ) : (
+        <ul className={style.project}>
+            <ProjectDetail
+              id={result.id}
+              category={result.category}
+              name={result.name}
+              image={result.image}
+              description={result.description}
+              demo={result.demo}
+              test={result.test}
+            />
+        </ul>
+      )}
+    </>
   );
 }
-
 export default Detail;
