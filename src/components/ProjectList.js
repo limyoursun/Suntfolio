@@ -3,13 +3,35 @@ import { Link } from "react-router-dom";
 /* css import */
 import style from "../styles/Home.module.scss";
 
-function Project({key, id, category, name, image, description, demo, test }) {
+/* icon import */
+import { MdWork } from "react-icons/md";
+import { BsPersonWorkspace } from "react-icons/bs";
+import { IoIosArrowRoundForward} from "react-icons/io";
+
+/* component import */
+import BtnCircle from "../components/BtnCircle";
+
+function Project({
+  key,
+  id,
+  category,
+  name,
+  image,
+  description,
+  demo,
+  test,
+  theme,
+}) {
+  const BadgeIcon = category === "개인" ? BsPersonWorkspace : MdWork;
   return (
     <li key="project.id">
-      <div className={style.tumb} style={{backgroundColor:`${name}`}}>
-        <img src={image} alt={name}/>
-      </div>
-      <span>{category}</span>
+      <Link
+        to={demo}
+        className={style.tumb}
+        style={{ backgroundColor: `${theme}` }}
+      >
+        <img src={image} alt={name} />
+      </Link>
       <h2>{name}</h2>
       <p>
         {description.length > 100
@@ -21,7 +43,15 @@ function Project({key, id, category, name, image, description, demo, test }) {
           <li key={g}>{g}</li>
         ))}
       </ul>
-        <Link to={`detail/${id}`} className="btn_site">Detail</Link>
+      <div className={style.btn_wrap}>
+        <div className={style.category}>
+          <BtnCircle/>
+          <BadgeIcon/>
+        </div>
+        <Link to={`detail/${id}`} className="btn_site">
+          <IoIosArrowRoundForward className="icon"/>
+        </Link>
+      </div>
     </li>
   );
 }

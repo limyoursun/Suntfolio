@@ -7,13 +7,14 @@
 
   &>li {
     width: 300px;
+    height: 500px;
     padding: 20px;
-    max-height: 500px;
     background-color: #fff;
     border-radius: 20px;
   }
 
   .tumb {
+    display: block;
     width: 150px;
     height: 150px;
     margin: 10px auto 20px;
@@ -43,5 +44,66 @@
     margin-right: 10px;
     font-size: 1.4rem;
   }
-  ul{margin-bottom: 10px;}
+
+  ul {
+    margin-bottom: 10px;
+  }
+
+  .btn_wrap {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      position: relative;
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% -50%);
+      }
+    }
+  }
+
+  @keyframes test {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .category {
+    position:relative;
+    .btn_circle {
+      &+svg {
+        position:absolute;
+        top:50%;
+        left: 50%;
+        font-size: 1.8rem;
+        transform:translate(-50%, -50%);
+        *{
+          color:var(--color--main);
+        }
+      }
+
+      svg {
+        fill: currentColor;
+        width: 55px;
+        height: auto;
+        transform-origin: center;
+        animation: test 5s linear infinite;
+        * {
+          color:var(--shadow--list);
+          font-size: 2rem;
+          font-weight:normal;
+        }
+      }
+    }
+
+  }
+
+
 }

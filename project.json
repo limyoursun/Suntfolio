@@ -1,24 +1,46 @@
 [
   {
     "id": 1,
-    "category": "test",
-    "period":"xxxx-xx ~ xxxx-xx",
-    "name": "사용자 맞춤형 지진정보서비스",
-    "description": "기상청에서 제공하는 실시간 지진감지 서비스 페이지입니다. 2021년부터 약 3년 간 기능 추가 및 유지보수를 담당하였습니다.",
-    "skill": ["html", "css", "jquery"],
-    "demo": "https://www.weather.go.kr/pews/",
+    "category": "개인",
+    "period":"2021.03",
+    "name": "2021 포트폴리오",
+    "description": "",
+    "skill": ["jQuery", "figma"],
+    "demo": "https://limyoursun.github.io/limsun/",
     "image": "이미지~",
-    "theme":"f00"
+    "theme": "#2b3ba0"
   },
   {
     "id": 2,
-    "category": "기상청",
-    "period":"xxxx-xx ~ xxxx-xx",
-    "name": "태풍",
-    "description": "기상청에서 제공하는 태풍경로 안내 서비스 페이지입니다. 2021년부터 약 3년 간 기능 추가 및 유지보수를 담당하였습니다.",
-    "skill": ["html", "scss", "jquery", "swiper-js"],
+    "category": "개인",
+    "period":"2020.08 - 2020.09",
+    "name": "빅이슈 코리아 홈페이지",
+    "description": "Figma, jQuery를 이용하여 빅이슈 코리아의 홈페이지를 리디자인했습니다. 빅이슈의 상징색상인 레드 컬러를 활용하여 각 페이지의 요소를 강조하고, 브랜드 아이덴티티를 강화했습니다. 그누보드를 사용해 게시판 기능을 구현하였으며, 반응형 웹 디자인 적용을 통해 어떤 환경에서도 사이트를 편리하게 이용할 수 있도록 고민했습니다. 홈리스를 위한 기회를 창출하여 나아가는 빅이슈 코리아의 활동과 전신에 기초한 따뜻하고 인간적인 분위기를 녹여낸 웹사이트 제작을 의도했습니다. 깔끔한 레이아웃을 이용함으로써 매거진 홈페이지의 정체성을 유지하였습니다.",
+    "skill": ["jQuery", "figma"],
     "demo": "",
     "image": "이미지~",
-    "theme":"f00"
+    "theme": "#ed1c24"
+  },
+  {
+    "id": 3,
+    "category": "개인",
+    "period":"2020.09 - 2020.10",
+    "name": "마스터카드 홈페이지",
+    "description": "마스터카드는 전 세계 금융기관, 기업, 카드 소지자 및 가맹점 사이에서 중요한 경제적 연결고리를 제공하는 글로벌 기업입니다. 좌측 GNB와 다크모드를 사용하여 사용자의 다양성에 따른 사용성 향상을 의도했습니다. 남산타워 등 대한민국 랜드마크의 이미지를 활용한 디자인을 적용하였습니다.",
+    "skill": ["jQuery"],
+    "demo": "https://limyoursun.github.io/mastercard/",
+    "image": "이미지~",
+    "theme": "#ea6008"
+  },
+  {
+    "id": 4,
+    "category": "개인",
+    "period":"2020.09 - 2020.10",
+    "name": "보스 홈페이지",
+    "description": "고도의 기술력을 자랑하는 오디오 브랜드 보스는 50년이 넘도록 최고의 브랜드로 자리하고 있습니다. 소수 애호가들이나 사용하던 오디오를 초보자도 즐길 수 있는 간단한 제품으로 만들며, 오디오의 전 세계적인 대중화를 이끌었습니다. 유서 깊고 전통적이면서 혁신적인 보스 브랜드의 이미지를 강조하는 홈페이지 제작을 하였습니다.",
+    "skill": ["jQuery"],
+    "demo": "https://limyoursun.github.io/bose/",
+    "image": "이미지~",
+    "theme": "#0b0909"
   }
 ]

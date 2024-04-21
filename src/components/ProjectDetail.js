@@ -11,28 +11,20 @@ import { BiSolidBookmarkHeart } from "react-icons/bi";
 import BtnBack from "../components/BtnBack";
 
 function ProjectDetail({
-  key,
-  id,
-  category,
-  name,
-  image,
-  description,
-  demo,
-  test,
-}) {
+  id, category, period, name, description, skill, demo, image, theme}) {
   return (
     <>
       <section>
         <BtnBack className="icon" />
         <aside className={`${style.detail_side}`}>
-          <div className={style.tumb}>
+          <div className={style.tumb} style={{ backgroundColor: `${theme}` }}>
             <img src={image} alt={name}/>
           </div>
           <span>{category}</span>
-          <em>{test}</em>
+          <em>{period}</em>
           <h2>{name}</h2>
           <ul className="builtwith_wrap">
-            {test.map((g) => (
+            {skill.map((g) => (
               <li key={g}>{g}</li>
             ))}
           </ul>

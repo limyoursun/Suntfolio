@@ -37,11 +37,13 @@ function Detail() {
             <ProjectDetail
               id={project.id}
               category={project.category}
+              period={project.period}
               name={project.name}
-              image={project.image}
               description={project.description}
+              skill={project.skill}
               demo={project.demo}
-              test={project.test}
+              image={project.image}
+              theme={project.theme}
             />
           ))}
         </>

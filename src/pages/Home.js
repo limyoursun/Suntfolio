@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 
 /* css import */
 import style from "../styles/Home.module.scss";
@@ -10,7 +9,7 @@ import Project from "../components/ProjectList";
 function Home() {
   const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState([]);
-  
+
   const getProjects = async () => {
     const json = await (
       await fetch(
@@ -35,10 +34,11 @@ function Home() {
               id={project.id}
               category={project.category}
               name={project.name}
-              image={project.image}
               description={project.description}
+              test={project.skill}
               demo={project.demo}
-              test={project.test}
+              image={project.image}
+              theme={project.theme}
             />
           ))}
         </ul>
