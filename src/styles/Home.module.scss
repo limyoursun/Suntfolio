@@ -1,16 +1,18 @@
 .project {
   display: flex;
-  gap: 15px;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
-  padding: 30px 0;
 
   &>li {
-    width: 300px;
+    flex: 0 1 calc(25% - 20px);
     height: 500px;
     padding: 20px;
     background-color: #fff;
     border-radius: 20px;
+    transition: .5s;
   }
 
   .tumb {
@@ -20,20 +22,25 @@
     margin: 10px auto 20px;
     border-radius: 50%;
     text-align: center;
-    box-shadow: 0 0 10px 5px #cbcbcb;
+    box-shadow: -1px 6px 7px 2px #cbcbcb;
 
-    img {
-      font-size: 0;
-      line-height: 150px;
+    &>* {
+      position: relative;
+      top: 50%;
+      font-size: 5rem;
+      transform: translateY(-50%);
+      *{color: #fff;}
     }
   }
 
   h2 {
+    letter-spacing: -.08rem;
     margin-bottom: 10px;
     text-align: left;
     font-size: 2rem;
 
     &+p {
+      letter-spacing: -.08rem;
       margin-bottom: 20px;
       font-size: 1.5rem;
       word-break: break-word;
@@ -76,16 +83,17 @@
   }
 
   .category {
-    position:relative;
+    position: relative;
+
     .btn_circle {
       &+svg {
-        position:absolute;
-        top:50%;
-        left: 50%;
+        position: absolute;
+        top: 32%;
+        left: 35%;
         font-size: 1.8rem;
-        transform:translate(-50%, -50%);
-        *{
-          color:var(--color--main);
+
+        * {
+          color: var(--color--main);
         }
       }
 
@@ -95,10 +103,11 @@
         height: auto;
         transform-origin: center;
         animation: test 5s linear infinite;
+
         * {
-          color:var(--shadow--list);
+          color: var(--shadow--list);
           font-size: 2rem;
-          font-weight:normal;
+          font-weight: normal;
         }
       }
     }

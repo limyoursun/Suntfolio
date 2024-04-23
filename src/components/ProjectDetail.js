@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 import style from "../styles/Detail.module.scss";
 
 /* icon import */
-import { PiCodeFill, PiPencilCircleFill } from "react-icons/pi";
-import { BiSolidBookmarkHeart } from "react-icons/bi";
+import { ArrowRight, VectorPen, CodeSquare} from 'react-bootstrap-icons';
+
+
 
 /* component import */
 import BtnBack from "../components/BtnBack";
 
-function ProjectDetail({
-  id, category, period, name, description, skill, demo, image, theme}) {
+function ProjectDetail({category, period, name, description, skill, demo, image, theme}) {
   return (
     <>
       <section>
@@ -29,26 +29,24 @@ function ProjectDetail({
             ))}
           </ul>
           <p>{description}</p>
-          <Link to={demo} className="btn_site">VIEW</Link>
+          <Link to={demo} className="btn_site">
+          <ArrowRight className="icon"/>
+        </Link>
         </aside>
       </section>
       <section className={style.detail_con}>
         <ul>
           <li>
             주요 기능
-            <BiSolidBookmarkHeart className="icon" />
+            <VectorPen className="icon" />
           </li>
           <li>
             디자인 관련
-            <PiPencilCircleFill className="icon" />
+            <VectorPen className="icon" />
           </li>
           <li>
             코딩 관련
-            <PiCodeFill className="icon" />
-          </li>
-          <li>
-            코딩 관련
-            <PiCodeFill className="icon" />
+            <CodeSquare className="icon" />
           </li>
         </ul>
         <div></div>

@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import { IoIosArrowRoundBack } from "react-icons/io";
+
+/* icon import */
+import { ArrowLeft} from 'react-bootstrap-icons';
 
 const BtnBack = () => {
   const navigate = useNavigate();
@@ -10,7 +12,7 @@ const BtnBack = () => {
   
   return (
     <button onClick={handleBack} className="btn_back">
-      <IoIosArrowRoundBack className='icon'/>BACK
+      <ArrowLeft className='icon'/>BACK
     </button>
     )
   

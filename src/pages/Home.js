@@ -39,6 +39,7 @@ function Home() {
               demo={project.demo}
               image={project.image}
               theme={project.theme}
+              icon={project.icon}
             />
           ))}
         </ul>

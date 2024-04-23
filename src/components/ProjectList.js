@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 import style from "../styles/Home.module.scss";
 
 /* icon import */
-import { MdWork } from "react-icons/md";
-import { BsPersonWorkspace } from "react-icons/bs";
-import { IoIosArrowRoundForward} from "react-icons/io";
+import { ArrowRight, PersonBoundingBox, BriefcaseFill} from 'react-bootstrap-icons';
+import * as Icons from 'react-bootstrap-icons';
 
 /* component import */
 import BtnCircle from "../components/BtnCircle";
@@ -21,8 +20,11 @@ function Project({
   demo,
   test,
   theme,
+  icon
 }) {
-  const BadgeIcon = category === "개인" ? BsPersonWorkspace : MdWork;
+  const BadgeIcon = category === "개인" ? PersonBoundingBox : BriefcaseFill;
+  const IconComponent = Icons[icon];
+
   return (
     <li key="project.id">
       <Link
@@ -30,7 +32,7 @@ function Project({
         className={style.tumb}
         style={{ backgroundColor: `${theme}` }}
       >
-        <img src={image} alt={name} />
+        {IconComponent && <IconComponent />}
       </Link>
       <h2>{name}</h2>
       <p>
@@ -49,10 +51,11 @@ function Project({
           <BadgeIcon/>
         </div>
         <Link to={`detail/${id}`} className="btn_site">
-          <IoIosArrowRoundForward className="icon"/>
+          <ArrowRight className="icon"/>
         </Link>
       </div>
     </li>
+    
   );
 }
 

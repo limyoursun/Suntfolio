@@ -2,7 +2,7 @@
 :root {
   --color--common: #333;
   --color--list: #fff;
-  --bg--list: #333;
+  --bg--list: #000;
   --color--main: #999;
   --shadow--list: #222;
   --bg--key: #ffe96c;
@@ -12,7 +12,7 @@
 @font-face {
   font-family: "GowunDodum-Regular";
   font-weight: normal;
-  src: url("./../assets/font/PretendardVariable.ttf") format("truetype");
+  src: url("./../assets/fonts/PretendardVariable.ttf") format("truetype");
 }
 
 * {
@@ -61,6 +61,7 @@ body {
 /* button */
 .btn_site {
   position: relative;
+  display:inline-block;
   width: 50px;
   height: 50px;
   line-height: 50px;
@@ -100,5 +101,5 @@ body {
 
 /* icon */
 .icon {
-  font-size: 3rem;
+  font-size: 2rem;
 }
