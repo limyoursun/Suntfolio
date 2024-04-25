@@ -3,12 +3,12 @@
   flex-wrap: wrap;
   gap: 25px;
   justify-content: space-between;
-  align-items: center;
+  align-items:normal;
   height: 100%;
 
   &>li {
     flex: 0 1 calc(25% - 20px);
-    height: 500px;
+    max-height: 500px;
     padding: 20px;
     background-color: #fff;
     border-radius: 20px;
@@ -16,6 +16,7 @@
   }
 
   .tumb {
+    position:relative;
     display: block;
     width: 150px;
     height: 150px;
@@ -23,11 +24,23 @@
     border-radius: 50%;
     text-align: center;
     box-shadow: -1px 6px 7px 2px #cbcbcb;
-
+    &::after{
+      position:absolute;
+      display: block;
+      top:5%;
+      right:20%;
+      content:'';
+      width: 10%;
+      height: 40%;
+      border-radius:50%;
+      background-color:#fff;
+      filter: blur(15px);
+      transform: rotate(150deg);
+    }
     &>* {
       position: relative;
       top: 50%;
-      font-size: 5rem;
+      font-size: 7rem;
       transform: translateY(-50%);
       *{color: #fff;}
     }

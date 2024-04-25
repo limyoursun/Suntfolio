@@ -5,13 +5,13 @@
     "period":"2021.10 - 2021.12",
     "client":"해양수산부",
     "name": "어촌어항관리시스템",
-    "description": "",
-    "design": "",
-    "publishing": "웹 접근성",
+    "description": "설명이요 설명 네네 설명이 들어있는 부분이에요. 설명이요 설명 네네 설명이 들어있는 부분이에요. 설명이요 설명 네네 설명이 들어있는 부분이에요.",
+    "design": "디자인에 신경 쓴 부분이요...^^ 디자인에 신경 쓴 부분이요...^^ 디자인에 신경 쓴 부분이요...^^ 디자인에 신경 쓴 부분이요...^^",
+    "publishing": "퍼블리싱에 신경 쓴 부분이요...^^ 퍼블리싱에 신경 쓴 부분이요...^^ 퍼블리싱에 신경 쓴 부분이요...^^ 퍼블리싱에 신경 쓴 부분이요...^^ 퍼블리싱에 신경 쓴 부분이요...^^",
     "skill": ["jQuery", "Zeplin"],
     "demo": "https://naraport.mof.go.kr/",
     "image": "이미지~",
-    "theme": "#006ac7",
+    "theme": "#00a49e",
     "icon":"Tsunami"
   },
   {
@@ -26,12 +26,13 @@
     "skill": ["jQuery", "Zeplin"],
     "demo": "https://www.weather.go.kr/w/typhoon/ko/weather/typhoon_02.jsp",
     "image": "이미지~",
-    "theme": "#006ac7"
+    "theme": "#006ac7",
+    "icon":"Hurricane"
   },
   {
     "id": 3,
     "category": "업무",
-    "period":"2021.03",
+    "period":"2021.03 - 2023.10",
     "client":"기상청",
     "name": "실시간 지진 감지 영상",
     "description": "",
@@ -40,12 +41,13 @@
     "skill": ["jQuery", "Zeplin"],
     "demo": "https://www.youtube.com/watch?v=UA7D8dTHnZU",
     "image": "img_pews.png",
-    "theme": "#2b3ba0"
+    "theme": "#2c333e",
+    "icon":"Youtube"
   },
   {
     "id": 4,
     "category": "업무",
-    "period":"2021.03",
+    "period":"2021.03 - 2023.10",
     "client":"기상청",
     "name": "사용자 맞춤형 지진정보서비스",
     "description": "",
@@ -54,13 +56,14 @@
     "skill": ["jQuery", "Zeplin"],
     "demo": "https://www.weather.go.kr/pews/",
     "image": "img_pews.png",
-    "theme": "#2b3ba0"
+    "theme": "#fe8328",
+    "icon":"GlobeCentralSouthAsia"
   },
   {
     "id": 5,
     "category": "업무",
     "client":"해양경찰청",
-    "period":"2021.03",
+    "period":"2022.01 - 2022.12",
     "name": "연안안전 통합 시스템",
     "description": "",
     "design": "",
@@ -68,7 +71,8 @@
     "skill": ["jQuery", "Zeplin"],
     "demo":"https://play.google.com/store/apps/details?id=com.kitvalley.kcgmobile&hl=ko&gl=US",
     "image": "img_kcg.png",
-    "theme": "#2b3ba0"
+    "theme": "#475fff",
+    "icon":"LifePreserver"
   },
   {
     "id": 6,
@@ -82,12 +86,13 @@
     "skill": ["jQuery", "Zeplin"],
     "demo": "https://eq.ndmi.go.kr/",
     "image": "img_eqndmi.png",
-    "theme": "#176899"
+    "theme": "#176899",
+    "icon":"ShareFill"
   },
   {
     "id": 7,
     "category": "업무",
-    "period":"2021.03",
+    "period":"2022.01 - 2022.12",
     "client":"우주전파센터",
     "name": "재난대응 시스템",
     "description": "",
@@ -96,7 +101,8 @@
     "skill": ["jQuery", "Zeplin"],
     "demo": "",
     "image": "이미지~",
-    "theme": "#006ac7"
+    "theme": "#90c31f",
+    "icon":"RocketTakeoffFill"
   },
   {
     "id": 8,
@@ -109,12 +115,13 @@
     "skill": ["jQuery", "Zeplin"],
     "demo": "",
     "image": "이미지~",
-    "theme": "#006ac7"
+    "theme": "#933dda",
+    "icon":"ClipboardDataFill"
   },
   {
     "id": 9,
     "category": "업무",
-    "period":"2021.03",
+    "period":"2021.03 - 2023.10",
     "client":"기상청",
     "name": "국가지진자료 품질관리체계",
     "description": "",
@@ -123,7 +130,8 @@
     "skill": ["jQuery", "Zeplin"],
     "demo": "",
     "image": "이미지~",
-    "theme": "#006ac7"
+    "theme": "#d19d18",
+    "icon":"Activity"
   },
   {
     "id": 10,
@@ -137,12 +145,13 @@
     "skill": ["jQuery", "Zeplin"],
     "demo": "",
     "image": "이미지~",
-    "theme": "#006ac7"
+    "theme": "#006ac7",
+    "icon":"EnvelopeExclamationFill"
   },
   {
     "id": 11,
     "category": "업무",
-    "period":"2021.03",
+    "period":"2021.04 - 2022.12",
     "client":"국립재난안전연구원",
     "name": "스마트 지오펜싱 재난정보 전달 플랫폼",
     "description": "",
@@ -151,43 +160,11 @@
     "skill": ["jQuery", "Zeplin"],
     "demo": "",
     "image": "이미지~",
-    "theme": "#006ac7"
-  },
-  {
-    "id": 12,
-    "category": "업무",
-    "period":"2021.03",
-    "client":"국립재난안전연구원",
-    "name": "청각장애인 재난 긴급알림 시스템",
-    "description": "",
-    "design": "",
-    "publishing": "",
-    "skill": ["jQuery", "Zeplin"],
-    "demo": "",
-    "image": "이미지~",
-    "theme": "#006ac7"
+    "theme": "#006ac7",
+    "icon":"BrightnessAltHighFill"
   },
   {
     "id": 13,
-    "category": "업무",
-    "period":"2021.03",
-    "client":"국립재난안전연구원",
-    "name": "서울시 통합재난 예경보 플랫폼",
-    "description": "",
-    "design": "",
-    "publishing": "",
-    "skill": ["jQuery", "Zeplin"],
-    "demo": "",
-    "image": "이미지~",
-    "theme": "#006ac7"
-  },
-
-  
-
-
-
-  {
-    "id": 14,
     "category": "개인",
     "period":"2021.03",
     "name": "2021 포트폴리오",
@@ -197,10 +174,11 @@
     "skill": ["jQuery", "figma"],
     "demo": "https://limyoursun.github.io/limsun/",
     "image": "이미지~",
-    "theme": "#2b3ba0"
+    "theme": "#2b3ba0",
+    "icon":"BrightnessHighFill"
   },
   {
-    "id": 15,
+    "id": 14,
     "category": "개인",
     "period":"2020.08 - 2020.09",
     "name": "빅이슈 코리아 홈페이지",
@@ -210,10 +188,11 @@
     "skill": ["jQuery", "figma"],
     "demo": "",
     "image": "이미지~",
-    "theme": "#ed1c24"
+    "theme": "#ed1c24",
+    "icon":"Newspaper"
   },
   {
-    "id": 16,
+    "id": 15,
     "category": "개인",
     "period":"2020.09 - 2020.10",
     "name": "마스터카드 홈페이지",
@@ -223,10 +202,11 @@
     "skill": ["jQuery"],
     "demo": "https://limyoursun.github.io/mastercard/",
     "image": "이미지~",
-    "theme": "#ea6008"
+    "theme": "#ea6008",
+    "icon":"CreditCardFill"
   },
   {
-    "id": 17,
+    "id": 16,
     "category": "개인",
     "period":"2020.09 - 2020.10",
     "name": "보스 홈페이지",
@@ -236,6 +216,7 @@
     "skill": ["jQuery"],
     "demo": "https://limyoursun.github.io/bose/",
     "image": "이미지~",
-    "theme": "#0b0909"
+    "theme": "#0b0909",
+    "icon":"SpeakerFill"
   }
 ]

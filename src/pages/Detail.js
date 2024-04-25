@@ -44,6 +44,8 @@ function Detail() {
               demo={project.demo}
               image={project.image}
               theme={project.theme}
+              design={project.design}
+              publishing={project.publishing}
             />
           ))}
         </>

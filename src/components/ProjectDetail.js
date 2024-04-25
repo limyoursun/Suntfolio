@@ -4,21 +4,30 @@ import { Link } from "react-router-dom";
 import style from "../styles/Detail.module.scss";
 
 /* icon import */
-import { ArrowRight, VectorPen, CodeSquare} from 'react-bootstrap-icons';
-
-
+import { ArrowRight, VectorPen, CodeSquare } from "react-bootstrap-icons";
 
 /* component import */
 import BtnBack from "../components/BtnBack";
 
-function ProjectDetail({category, period, name, description, skill, demo, image, theme}) {
+function ProjectDetail({
+  category,
+  period,
+  name,
+  description,
+  skill,
+  demo,
+  image,
+  theme,
+  design,
+  publishing,
+}) {
   return (
     <>
       <section>
         <BtnBack className="icon" />
         <aside className={`${style.detail_side}`}>
           <div className={style.tumb} style={{ backgroundColor: `${theme}` }}>
-            <img src={image} alt={name}/>
+            <img src={image} alt={name} />
           </div>
           <span>{category}</span>
           <em>{period}</em>
@@ -30,8 +39,8 @@ function ProjectDetail({category, period, name, description, skill, demo, image,
           </ul>
           <p>{description}</p>
           <Link to={demo} className="btn_site">
-          <ArrowRight className="icon"/>
-        </Link>
+            <ArrowRight className="icon" />
+          </Link>
         </aside>
       </section>
       <section className={style.detail_con}>
@@ -49,7 +58,10 @@ function ProjectDetail({category, period, name, description, skill, demo, image,
             <CodeSquare className="icon" />
           </li>
         </ul>
-        <div></div>
+        <div>
+          <p>{design}</p>
+          <p>{publishing}</p>
+        </div>
       </section>
     </>
   );
