@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import style from "../styles/Detail.module.scss";
 
 /* icon import */
-import { ArrowRight, VectorPen, CodeSquare } from "react-bootstrap-icons";
+import { ArrowRight, VectorPen, CodeSquare, GitHub } from "react-bootstrap-icons";
 
 /* component import */
 import BtnBack from "../components/BtnBack";
@@ -46,8 +46,8 @@ function ProjectDetail({
       <section className={style.detail_con}>
         <ul>
           <li>
-            주요 기능
-            <VectorPen className="icon" />
+            깃헙 바로가기
+            <GitHub className="icon" />
           </li>
           <li>
             디자인 관련
