@@ -33,6 +33,7 @@ function Home() {
             <Project
               id={project.id}
               category={project.category}
+              client={project.client}
               name={project.name}
               description={project.description}
               test={project.skill}

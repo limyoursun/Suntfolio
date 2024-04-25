@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import style from "../styles/Detail.module.scss";
 
 /* icon import */
-import { ArrowRight, VectorPen, CodeSquare, GitHub } from "react-bootstrap-icons";
+import { ArrowRight, VectorPen, CodeSquare, Github } from "react-bootstrap-icons";
 
 /* component import */
 import BtnBack from "../components/BtnBack";
@@ -27,7 +27,7 @@ function ProjectDetail({
         <BtnBack className="icon" />
         <aside className={`${style.detail_side}`}>
           <div className={style.tumb} style={{ backgroundColor: `${theme}` }}>
-            <img src={image} alt={name} />
+            <img src={`../images/${image}`} alt={name} />
           </div>
           <span>{category}</span>
           <em>{period}</em>
@@ -46,8 +46,9 @@ function ProjectDetail({
       <section className={style.detail_con}>
         <ul>
           <li>
-            깃헙 바로가기
-            <GitHub className="icon" />
+            <Link to={demo} className="icon" alt="깃헙 바로가기 링크">
+              <Github className="icon"/>
+            </Link>
           </li>
           <li>
             디자인 관련
@@ -59,6 +60,7 @@ function ProjectDetail({
           </li>
         </ul>
         <div>
+          <img src={`../images/${image}`} alt={name} />
           <p>{design}</p>
           <p>{publishing}</p>
         </div>

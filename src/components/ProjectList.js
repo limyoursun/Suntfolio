@@ -13,6 +13,7 @@ import BtnCircle from "../components/BtnCircle";
 function Project({
   key,
   id,
+  client,
   category,
   name,
   image,
@@ -34,6 +35,7 @@ function Project({
       >
         {IconComponent && <IconComponent />}
       </Link>
+      <span>{client}</span>
       <h2>{name}</h2>
       <p>
         {description.length > 100
