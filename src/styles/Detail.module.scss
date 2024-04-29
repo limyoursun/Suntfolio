@@ -1,74 +1,73 @@
-main:has(.detail_side) {
-  display: flex;
-  gap: 15px;
+main:has(.detail_con) {
 
-  &>* {
-    padding: 20px;
-    border-radius: 15px;
-    background-color: #fff;
-  }
-  section:has(.detail_side){
-    align-self: start;
-  }
-  .detail_side {
-    width: 350px;
-    align-self: baseline;
-
-    .tumb {
-      margin-bottom: 20px;
-      height: 300px;
-      img{
-        width: 100%;
+  &>.detail_con {
+    position:relative;
+    height: 100%;
+    &::after{
+      position:absolute;
+      z-index:-1;
+      top: 0;
+      display: block;
+      content:'';
+      width:100%;
+      height:100%;
+      background-color:#8665f2;
+      border-radius:150px;
+    }
+    & * {
+      color: #fff;
+    }
+    aside{
+      padding-top:20px;
+      text-align: center;
+      p{
+        font-size:1.7rem;
+        letter-spacing:.2rem;
+      margin:15px 0 20px;
       }
     }
+    article {
+      width:80%;
+      min-height: 100%;
+      margin:0 auto;
+      padding:40px 50px;
+      border: 10px solid #514d4a;
+      border-radius: 80px;
+      background-color:#232323;
+      .con_info{
+        display: flex;
+        gap:70px;
+        & > div{
+          flex:0 1 100%;
+          margin-bottom:50px;
+          h2{
+            margin-bottom: 30px;
+            font-size:2.5rem;
+            svg{margin-right:10px;}
+          }
+          ul{display: inline-block;}
+          em{font-size:1.4rem;}
+          p{font-size:1.5rem;
+          line-height:2rem;
+          word-break: keep-all;
+          }
+        }
+      }
+      img{width:100%;}
+    }
 
-    span {
-      margin-right: 5px;
-      padding: 3px 7px;
-      border-radius: 50px;
-      background-color: var(--bg--key);
-      font-size: 1.5rem;
+    button {
+      border: 1px solid #fff;
+      border-radius: 30px;
+      padding: 5px 10px;
     }
 
     h2 {
-      margin: 10px 0 20px;
-      font-size: 2.5rem;
-      font-weight: bold;
-      line-height: 20px;
+      font-size: 1.8rem;
 
-    }
-
-    em {
-      font-size: 1.5rem;
-    }
-
-    p {
-      margin: 15px 0 20px;
-      font-size: 1.5rem;
-    }
-
-  }
-
-  &>.detail_con {
-    flex: 0 1 100%;
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-
-    ul {display:flex;gap:20px;
-      li{
-        padding: 10px;
-        border-radius:8px;
-        background-color:var(--bg--box);
-        font-size:0;
-        &:last-child{justify-content: flex-end;}
-      }
-    }
-    div{flex:0 1 100%;
-      img{
-        width: 100%;
-        border:1px solid #999;
-        border-radius: 15px;
+      &>* {
+        font-size: 2rem;
+        color: #000;
       }
     }
   }
