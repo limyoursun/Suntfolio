@@ -4,12 +4,7 @@ import { Link } from "react-router-dom";
 import style from "../styles/Detail.module.scss";
 
 /* icon import */
-import {
-  ArrowRight,
-  VectorPen,
-  CodeSquare,
-  Github,
-} from "react-bootstrap-icons";
+import { ArrowRight } from "react-bootstrap-icons";
 import * as Icons from "react-bootstrap-icons";
 
 /* component import */
@@ -35,9 +30,13 @@ function ProjectDetail({
         <aside>
           <BtnBack className="icon" />
           <p>
-          이곳은 프로젝트에 대한 자세한 설명과 함께, 제가 맡은 역할과 작업한 범위를 구체적으로 기재합니다.<br/>
-          프로젝트에서 사용한 기술과 도구에 대해서도 간략하게 소개해드립니다.<br/>
-          프로젝트를 작업하며 신경 쓴 주요 기능과 화면을 직접 확인하실 수 있어요!
+            이곳은 프로젝트에 대한 자세한 설명과 함께, 제가 맡은 역할과 작업한
+            범위를 구체적으로 기재합니다.
+            <br />
+            프로젝트에서 사용한 기술과 도구에 대해서도 간략하게 소개해드립니다.
+            <br />
+            프로젝트를 작업하며 신경 쓴 주요 기능과 화면을 직접 확인하실 수
+            있어요!
           </p>
         </aside>
         <article>
