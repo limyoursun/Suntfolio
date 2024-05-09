@@ -1,19 +1,5 @@
 .project {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  justify-content: space-between;
-  align-items:normal;
-  height: 100%;
 
-  &>li {
-    flex: 0 1 calc(25% - 20px);
-    max-height: 500px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 20px;
-    transition: .5s;
-  }
 
   .tumb {
     position:relative;

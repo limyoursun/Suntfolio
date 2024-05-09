@@ -9,6 +9,8 @@ import * as Icons from 'react-bootstrap-icons';
 
 /* component import */
 import BtnCircle from "../components/BtnCircle";
+import CardSlide from "../components/CardSlide";
+import { useEffect } from "react";
 
 function Project({
   key,
@@ -26,6 +28,10 @@ function Project({
   const BadgeIcon = category === "개인" ? PersonBoundingBox : BriefcaseFill;
   const IconComponent = Icons[icon];
 
+  useEffect(() => {
+    CardSlide();
+  })
+  
   return (
     <li key="project.id">
       <Link
@@ -42,11 +48,11 @@ function Project({
           ? `${description.slice(0, 100)}`
           : description}
       </p>
-      <ul className="builtwith_wrap">
+      <div className="builtwith_wrap">
         {test.map((g) => (
-          <li key={g}>{g}</li>
+          <span key={g}>{g}</span>
         ))}
-      </ul>
+      </div>
       <div className={style.btn_wrap}>
         <div className={style.category}>
           <BtnCircle/>

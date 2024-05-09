@@ -23,7 +23,6 @@ function Home() {
 
   useEffect(() => {
     getProjects();
-    CardSlide()
   }, []);
 
   return (
@@ -34,15 +33,20 @@ function Home() {
         <>
         <div className="gallery">
         <ul className="cards">
-          <li>0</li>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
+          {projects.map((project) => (
+            <Project
+              id={project.id}
+              category={project.category}
+              client={project.client}
+              name={project.name}
+              description={project.description}
+              test={project.skill}
+              demo={project.demo}
+              image={project.image}
+              theme={project.theme}
+              icon={project.icon}
+            />
+          ))}
         </ul>
         <div className="actions">
           <button className="prev">Prev</button>
