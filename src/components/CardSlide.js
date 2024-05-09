@@ -167,6 +167,45 @@ const CardSlide = () => {
       scrollToOffset(scrub.vars.offset);
     },
   });
+
+  // if you want a more efficient timeline, but it's a bit more complex to follow the code, use this function instead...
+  // function buildSeamlessLoop(items, spacing, animateFunc) {
+  // 	let overlap = Math.ceil(1 / spacing), // number of EXTRA animations on either side of the start/end to accommodate the seamless looping
+  // 		startTime = items.length * spacing + 0.5, // the time on the rawSequence at which we'll start the seamless loop
+  // 		loopTime = (items.length + overlap) * spacing + 1, // the spot at the end where we loop back to the startTime
+  // 		rawSequence = gsap.timeline({paused: true}), // this is where all the "real" animations live
+  // 		seamlessLoop = gsap.timeline({ // this merely scrubs the playhead of the rawSequence so that it appears to seamlessly loop
+  // 			paused: true,
+  // 			repeat: -1, // to accommodate infinite scrolling/looping
+  // 			onRepeat() { // works around a super rare edge case bug that's fixed GSAP 3.6.1
+  // 				this._time === this._dur && (this._tTime += this._dur - 0.01);
+  // 			}
+  // 		}),
+  // 		l = items.length + overlap * 2,
+  // 		time, i, index;
+  //
+  // 	// now loop through and create all the animations in a staggered fashion. Remember, we must create EXTRA animations at the end to accommodate the seamless looping.
+  // 	for (i = 0; i < l; i++) {
+  // 		index = i % items.length;
+  // 		time = i * spacing;
+  // 		rawSequence.add(animateFunc(items[index]), time);
+  // 		i <= items.length && seamlessLoop.add("label" + i, time); // we don't really need these, but if you wanted to jump to key spots using labels, here ya go.
+  // 	}
+  //
+  // 	// here's where we set up the scrubbing of the playhead to make it appear seamless.
+  // 	rawSequence.time(startTime);
+  // 	seamlessLoop.to(rawSequence, {
+  // 		time: loopTime,
+  // 		duration: loopTime - startTime,
+  // 		ease: "none"
+  // 	}).fromTo(rawSequence, {time: overlap * spacing + 1}, {
+  // 		time: startTime,
+  // 		duration: startTime - (overlap * spacing + 1),
+  // 		immediateRender: false,
+  // 		ease: "none"
+  // 	});
+  // 	return seamlessLoop;
+  // }
 };
 
 export default CardSlide;

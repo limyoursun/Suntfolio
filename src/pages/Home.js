@@ -1,7 +1,4 @@
-import { useEffect, useState, useRef } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "https://cdn.skypack.dev/gsap@3.7.0/ScrollTrigger";
-import Draggable from "https://cdn.skypack.dev/gsap@3.7.0/Draggable";
+import { useEffect, useState } from "react";
 
 /* css import */
 import style from "../styles/Home.module.scss";
@@ -26,16 +23,17 @@ function Home() {
 
   useEffect(() => {
     getProjects();
-  }, []);
-
-  useEffect(() => {
     CardSlide()
   }, []);
 
   return (
     <>
-      <div class="gallery">
-        <ul class="cards">
+      {loading ? (
+        <h1>로딩중</h1>
+      ) : (
+        <>
+        <div className="gallery">
+        <ul className="cards">
           <li>0</li>
           <li>1</li>
           <li>2</li>
@@ -46,12 +44,14 @@ function Home() {
           <li>7</li>
           <li>8</li>
         </ul>
-        <div class="actions">
-          <button class="prev">Prev</button>
-          <button class="next">Next</button>
+        <div className="actions">
+          <button className="prev">Prev</button>
+          <button className="next">Next</button>
         </div>
       </div>
-      <div class="drag-proxy"></div>
+      <div className="drag-proxy"></div>
+        </>
+      )}
     </>
   );
 }
