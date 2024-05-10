@@ -32,7 +32,7 @@ function Home() {
       ) : (
         <>
         <div className="gallery">
-        <ul className="cards">
+        <ul className={`cards ${style.project}`} >
           {projects.map((project) => (
             <Project
               id={project.id}

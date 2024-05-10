@@ -18,11 +18,11 @@ const CardSlide = () => {
       const tl = gsap.timeline();
       tl.fromTo(
         element,
-        { scale: 0, opacity: 0 },
+        { scale: 1, opacity: 0, zIndex: 0, },
         {
           scale: 1,
           opacity: 1,
-          zIndex: 100,
+          zIndex: 1000,
           duration: 0.5,
           yoyo: true,
           repeat: 1,
@@ -31,8 +31,8 @@ const CardSlide = () => {
         }
       ).fromTo(
         element,
-        { xPercent: 400 },
-        { xPercent: -400, duration: 1, ease: "none", immediateRender: false },
+        { xPercent: 550},
+        { xPercent: -550, duration: 1, ease: "none", immediateRender: false },
         0
       );
       return tl;

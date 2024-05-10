@@ -122,47 +122,83 @@ body {
 
 /* card slide */
 .gallery {
-	position: absolute;
+  position: absolute;
   top: 0;
   left: 0;
-	width: 100%;
-	height: 100vh;
-	overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .cards {
-	position: absolute;
-	width: 14rem;
-	height: 18rem;
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .cards li {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	width: 14rem;
-	height: 18rem;
-	text-align: center;
-	font-family: sans-serif;
-	background-color: #9d7cce;
-	position: absolute;
-	top: 0;
-	left: 0;
-	border-radius: 0.8rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-family: sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 7px solid transparent;
+  background-image: linear-gradient(#fff, #fff, #fff),
+  linear-gradient(to bottom, rgba(211,211,211,1) 10%,rgba(232,201,211,1) 15%,rgba(211,211,211,1) 20%,rgba(255,255,255,1) 25%,rgba(211,211,211,1) 30%,rgba(211,211,211,1) 30%,rgba(255,255,255,1) 35%,rgba(204,191,169,1) 40%,rgba(211,211,211,1) 45%,rgba(255,255,255,1) 50%,rgba(192,226,209,1) 55%,rgba(255,255,255,1) 60%,rgba(173,202,211,1) 65%,rgba(255,255,255,1) 70%,rgba(211,211,211,1) 80%,rgba(195,177,204,1) 85%,rgba(211,211,211,1) 90%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+
+
+  &:hover {
+    &::before {
+      opacity: 0.2;
+    }
+  }
+
+  &:before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    transition: .8s;
+    background: linear-gradient(135deg, rgba(236, 155, 182, 0) 20%, rgba(236, 155, 182, 1) 36%, rgba(204, 172, 111, 1) 43%, rgba(105, 228, 165, 1) 50%, rgba(142, 197, 214, 1) 57%, rgba(185, 140, 206, 1) 64%, rgba(185, 140, 206, 0) 80%);
+    opacity: 0;
+  }
+
+  &:after {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: url("./../assets/images/img_sparkles.gif");
+    opacity: .1;
+  }
 }
 
 .actions {
-	position: absolute;
-	bottom: 25px;
-	left: 50%;
-	transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 button {
-  display:inline-block;
+  display: inline-block;
   outline: none;
   border: none;
   padding: 8px 14px;
@@ -193,14 +229,7 @@ button {
 
 button:hover {
   background: #57a818;
-  background-image: -webkit-linear-gradient(top, #57a818, #4d9916);
-  background-image: -moz-linear-gradient(top, #57a818, #4d9916);
-  background-image: -ms-linear-gradient(top, #57a818, #4d9916);
-  background-image: -o-linear-gradient(top, #57a818, #4d9916);
-  background-image: linear-gradient(to bottom, #57a818, #4d9916);
   text-shadow: 0px 1px 0px #32610e;
-  -webkit-box-shadow: 0px 1px 0px fefefe;
-  -moz-box-shadow: 0px 1px 0px fefefe;
   box-shadow: 0px 1px 0px fefefe;
   color: #ffffff;
   text-decoration: none;
@@ -211,13 +240,6 @@ button {
   font-weight: 400;
 }
 
-a {
-  color: #88ce02;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
 .drag-proxy {
   visibility: hidden;
   position: absolute;
