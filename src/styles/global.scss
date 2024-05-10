@@ -40,7 +40,9 @@ button {
 }
 
 body {
-  background-color: var(--bg--list);
+  background:url("./../assets/images/bg_clouds.jpg") bottom no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
 }
 
 
@@ -132,8 +134,8 @@ body {
 
 .cards {
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 550px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -193,6 +195,7 @@ body {
 
 .actions {
   position: absolute;
+  top:50%;
   left: 50%;
   transform: translateX(-50%);
 }

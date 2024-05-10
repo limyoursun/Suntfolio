@@ -8,7 +8,7 @@ const CardSlide = () => {
   let iteration = 0; // gets iterated when we scroll all the way to the end or start and wraps around - allows us to smoothly continue the playhead scrubbing in the correct direction.
 
   // set initial state of items
-  gsap.set(".cards li", { xPercent: 400, opacity: 0, scale: 0 });
+  gsap.set(".cards li", { xPercent: 0, opacity: 0, scale: 0 });
 
   const spacing = 0.1, // spacing of the cards (stagger)
     snapTime = gsap.utils.snap(spacing), // we'll use this to snapTime the playhead on the seamlessLoop
@@ -18,7 +18,7 @@ const CardSlide = () => {
       const tl = gsap.timeline();
       tl.fromTo(
         element,
-        { scale: 1, opacity: 0, zIndex: 0, overflow: "visible" },
+        { scale: 0.5, opacity: 0, zIndex: 0 },
         {
           scale: 1,
           opacity: 1,
@@ -31,8 +31,8 @@ const CardSlide = () => {
         }
       ).fromTo(
         element,
-        { xPercent: 550},
-        { xPercent: -550, duration: 1, ease: "none", immediateRender: false },
+        { xPercent: 200},
+        { xPercent: -200, duration: 1, ease: "none", immediateRender: false },
         0
       );
       return tl;
