@@ -1,15 +1,20 @@
 header {
-  position:fixed;
-  z-index:9999;
+  position: fixed;
+  z-index: 9999;
   width: 100%;
   top: 0;
-  height: 50px;
-  background-color:transparent;
-  text-align: center;
+  height:150px;
+  background-color: transparent;
 
   h1 {
+    width:auto;
+    height:60px;
+    margin:50px auto 0;
     font-size: 0;
+    text-align:center;
 
-    img {}
+    img {
+      height: 100%;
+    }
   }
 }

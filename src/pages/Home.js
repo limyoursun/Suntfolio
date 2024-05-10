@@ -5,7 +5,7 @@ import style from "../styles/Home.module.scss";
 
 /* component import */
 import Project from "../components/ProjectList";
-import CardSlide from "../components/CardSlide";
+import Loading from "../components/Loading";
 
 function Home() {
   const [loading, setLoading] = useState(false);
@@ -28,7 +28,7 @@ function Home() {
   return (
     <>
       {loading ? (
-        <h1>로딩중</h1>
+        <Loading/>
       ) : (
         <>
         <div className="gallery">
@@ -49,8 +49,8 @@ function Home() {
           ))}
         </ul>
         <div className="actions">
-          <button className="prev">Prev</button>
-          <button className="next">Next</button>
+          <button className="btn_prev">이전 프로젝트</button>
+          <button className="btn_next">다음 프로젝트</button>
         </div>
       </div>
       <div className="drag-proxy"></div>

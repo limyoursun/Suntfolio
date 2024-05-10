@@ -100,12 +100,12 @@ const CardSlide = () => {
   }
 
   document
-    .querySelector(".next")
+    .querySelector(".btn_next")
     .addEventListener("click", () =>
       scrollToOffset(scrub.vars.offset + spacing)
     );
   document
-    .querySelector(".prev")
+    .querySelector(".btn_prev")
     .addEventListener("click", () =>
       scrollToOffset(scrub.vars.offset - spacing)
     );
