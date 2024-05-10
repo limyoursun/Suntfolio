@@ -18,7 +18,7 @@ const CardSlide = () => {
       const tl = gsap.timeline();
       tl.fromTo(
         element,
-        { scale: 1, opacity: 0, zIndex: 0, },
+        { scale: 1, opacity: 0, zIndex: 0, overflow: "visible" },
         {
           scale: 1,
           opacity: 1,
