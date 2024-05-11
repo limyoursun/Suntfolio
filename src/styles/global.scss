@@ -15,6 +15,13 @@
   src: url("./../assets/fonts/PretendardVariable.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./../assets/fonts/DMSerifDisplay-Regular.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -148,30 +155,9 @@ body {
   width: 100%;
   height: 100%;
   padding: 25px;
-  // border: 10px solid transparent;
-  // border-radius: 20px;
-  // background: linear-gradient(#fff, #fff, #fff) padding-box,
-  // linear-gradient(to bottom, rgba(211,211,211,1) 10%,rgba(232,201,211,1) 15%,rgba(211,211,211,1) 20%,rgba(255,255,255,1) 25%,rgba(211,211,211,1) 30%,rgba(211,211,211,1) 30%,rgba(255,255,255,1) 35%,rgba(204,191,169,1) 40%,rgba(211,211,211,1) 45%,rgba(255,255,255,1) 50%,rgba(192,226,209,1) 55%,rgba(255,255,255,1) 60%,rgba(173,202,211,1) 65%,rgba(255,255,255,1) 70%,rgba(211,211,211,1) 80%,rgba(195,177,204,1) 85%,rgba(211,211,211,1) 90%) border-box;
-  border: 2px solid #fff;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
-
-  &:hover {
-    &::before {
-      opacity: 0.2;
-    }
-  }
-
-  &:before {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: '';
-  }
 
   &:after {
     position: absolute;
@@ -182,40 +168,45 @@ body {
     height: 100%;
     content: '';
     background: linear-gradient(135deg, rgba(236, 155, 182, 0) 5%, rgba(226, 80, 128, 0.5) 25%, rgba(202, 143, 32, 0.5) 40%, rgba(28, 219, 120, 0.5) 55%, rgba(12, 161, 206, 0.5) 70%, rgba(145, 17, 204, 0.5) 85%, rgba(185, 140, 206, 0) 95%), url("./../assets/images/img_sparkles.gif");
-    opacity: .1;
+    opacity: .15;
   }
 }
 
 .actions {
   button {
     position: fixed;
-    top:50%;
+    top: 50%;
     border: none;
-    background: url(./../assets/images/btn_arrow.png) no-repeat center;
+    background: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
     font-size: 0;
     transform: translateY(-50%);
 
     &:hover {
       @keyframes identifier {
-        0% {filter: invert(1);}
-        50% {filter: invert(0);}
+        0% {
+          filter: invert(1);
+        }
+        50% {
+          filter: invert(0);
+        }
       }
-
       animation: identifier .8s infinite steps(1, end);
     }
 
     &.btn_prev {
-      left:10%;
-      width: 90px;
-      height: 125px;
-      background-position-y: top;
+      left: 10%;
+      width: 75px;
+      height: 105px;
+      background-image: url(./../assets/images/btn_arrow_left.png);
     }
 
     &.btn_next {
-      right:10%;
-      width: 130px;
-      height: 98px;
-      background-position-y: bottom;
+      right: 10%;
+      width: 110px;
+      height: 82px;
+      background-image: url(./../assets/images/btn_arrow_right.png);
     }
   }
 }
