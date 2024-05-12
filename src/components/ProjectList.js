@@ -5,9 +5,10 @@ import style from "../styles/Home.module.scss";
 
 /* icon import */
 import {
-  ArrowRight,
+  ThreeDots,
   PersonBoundingBox,
   BriefcaseFill,
+  BoxArrowInUpRight
 } from "react-bootstrap-icons";
 import * as Icons from "react-bootstrap-icons";
 
@@ -27,6 +28,7 @@ function Project({
   demo,
   test,
   theme,
+  subTheme,
   icon,
 }) {
   const BadgeIcon = category === "개인" ? PersonBoundingBox : BriefcaseFill;
@@ -37,36 +39,37 @@ function Project({
   });
 
   return (
-    <li key="project.id">
+    <li key="project.id" style={{ backgroundColor: `${theme}`, borderColor:`${theme}` }}>
       <span>{client}</span>
+      <div className={style.tumb}>{IconComponent && <IconComponent  style={{ color: `${subTheme}`}} />}</div>
       <div>
-        <h2>{name}</h2>
+        <div className={style.title}>
+          <div>
+            <div className="builtwith_wrap">
+              {test.map((g) => (
+                <span key={g}>{g}</span>
+              ))}
+            </div>
+            <h2>{name}</h2>
+          </div>
+          <div className={style.category}>
+            <BtnCircle />
+            <BadgeIcon />
+          </div>
+        </div>
         <p>
           {description.length > 100
             ? `${description.slice(0, 100)}`
             : description}
         </p>
-        <div className="builtwith_wrap">
-          {test.map((g) => (
-            <span key={g}>{g}</span>
-          ))}
-        </div>
-        <div className={style.btn_wrap}>
-          <div className={style.category}>
-            <BtnCircle />
-            <BadgeIcon />
-          </div>
+        <div>
+          <Link to={demo} target="_blank" className="btn_site">
+            <BoxArrowInUpRight className="icon" />
+          </Link>
           <Link to={`detail/${id}`} className="btn_site">
-            <ArrowRight className="icon" />
+            <ThreeDots className="icon" />
           </Link>
         </div>
-        <Link
-          to={demo}
-          className={style.tumb}
-          style={{ backgroundColor: `${theme}` }}
-        >
-          {IconComponent && <IconComponent />}
-        </Link>
       </div>
     </li>
   );

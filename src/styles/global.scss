@@ -10,9 +10,15 @@
 }
 
 @font-face {
-  font-family: "GowunDodum-Regular";
+  font-family: "PretendardVariable";
   font-weight: normal;
   src: url("./../assets/fonts/PretendardVariable.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "LeeSeoyun";
+  font-weight: 400;
+  src: url("./../assets/fonts/LeeSeoyun.otf");
 }
 
 @font-face {
@@ -27,7 +33,7 @@
   padding: 0;
   box-sizing: border-box;
   color: var(--color--common);
-  font-family: "GowunDodum-Regular";
+  font-family: "PretendardVariable";
   font-size: 10px;
   font-style: normal;
 }
@@ -57,13 +63,17 @@ body {
 .builtwith_wrap {
   display: flex;
   gap: 3px;
-
-  li {
-    padding: 3px 5px;
-    border-radius: 5px;
-    background-color: var(--bg--box);
+  margin-bottom: 5px;
+  span {
     font-size: 1.4rem;
-    color: var(--color--main);
+    color: #fff;
+    &::after{
+      margin:0 3px;
+      content:'|';
+    }
+    &:last-child{
+      &::after{display:none;}
+    }
   }
 }
 
@@ -74,10 +84,14 @@ body {
   width: 50px;
   height: 50px;
   line-height: 50px;
-  border: 1px solid var(--color--main);
+  border: 1px solid #fff;
   border-radius: 10px;
   font-size: 1.7rem;
   text-align: center;
+
+  * {
+    color: #fff;
+  }
 
   &::after {
     display: block;
@@ -88,7 +102,7 @@ body {
     border-radius: 6px;
     width: calc(100% - 8px);
     height: calc(100% - 8px);
-    border: 1px dashed var(--color--main);
+    border: 1px dashed #fff;
     transform: translate(-50%, -50%);
   }
 
@@ -114,21 +128,6 @@ body {
   font-size: 2rem;
 }
 
-
-
-.good {
-  width: 100px;
-  height: 100px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-weight: 600;
-  margin: 10px;
-  background-color: #fff;
-}
-
 /* card slide */
 .gallery {
   position: absolute;
@@ -137,79 +136,49 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-}
 
-.cards {
-  position: absolute;
-  width: 350px;
-  height: 550px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+  .actions {
+    button {
+      position: fixed;
+      top: 50%;
+      border: none;
+      background: transparent;
+      background-size: contain;
+      background-repeat: no-repeat;
+      font-size: 0;
+      transform: translateY(-50%);
 
-.cards li {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 25px;
-  background-color: #fff;
-  border-radius: 15px;
-  overflow: hidden;
+      &:hover {
+        @keyframes identifier {
+          0% {
+            filter: invert(1);
+          }
 
-  &:after {
-    position: absolute;
-    z-index: -2;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: '';
-    background: linear-gradient(135deg, rgba(236, 155, 182, 0) 5%, rgba(226, 80, 128, 0.5) 25%, rgba(202, 143, 32, 0.5) 40%, rgba(28, 219, 120, 0.5) 55%, rgba(12, 161, 206, 0.5) 70%, rgba(145, 17, 204, 0.5) 85%, rgba(185, 140, 206, 0) 95%), url("./../assets/images/img_sparkles.gif");
-    opacity: .15;
-  }
-}
-
-.actions {
-  button {
-    position: fixed;
-    top: 50%;
-    border: none;
-    background: transparent;
-    background-size: contain;
-    background-repeat: no-repeat;
-    font-size: 0;
-    transform: translateY(-50%);
-
-    &:hover {
-      @keyframes identifier {
-        0% {
-          filter: invert(1);
+          50% {
+            filter: invert(0);
+          }
         }
-        50% {
-          filter: invert(0);
-        }
+
+        animation: identifier .8s infinite steps(1, end);
       }
-      animation: identifier .8s infinite steps(1, end);
-    }
 
-    &.btn_prev {
-      left: 10%;
-      width: 75px;
-      height: 105px;
-      background-image: url(./../assets/images/btn_arrow_left.png);
-    }
+      &.btn_prev {
+        left: 10%;
+        width: 75px;
+        height: 105px;
+        background-image: url(./../assets/images/btn_arrow_left.png);
+      }
 
-    &.btn_next {
-      right: 10%;
-      width: 110px;
-      height: 82px;
-      background-image: url(./../assets/images/btn_arrow_right.png);
+      &.btn_next {
+        right: 10%;
+        width: 110px;
+        height: 82px;
+        background-image: url(./../assets/images/btn_arrow_right.png);
+      }
     }
   }
 }
+
 
 .drag-proxy {
   visibility: hidden;

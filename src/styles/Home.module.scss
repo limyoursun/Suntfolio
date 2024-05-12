@@ -1,120 +1,135 @@
 .project {
-  span {
-    margin-right: 10px;
-    font-size: 1.4rem;
-    writing-mode: vertical-rl;
+  position: absolute;
+  width: 370px;
+  height: 550px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  * {color: #fff;
+    font-family: "LeeSeoyun";
   }
 
-
-
-
-
-
-  .tumb {
-    position:relative;
-    display: block;
-    width: 100px;
-    height: 100px;
-    margin: 10px auto 20px;
-    border-radius: 50%;
-    text-align: center;
-    &::after{
-      position:absolute;
-      display: block;
-      top:5%;
-      right:20%;
-      content:'';
-      width: 10%;
-      height: 40%;
-      border-radius:50%;
-      background-color:#fff;
-      filter: blur(15px);
-      transform: rotate(150deg);
-    }
-    &>* {
-      position: relative;
-      top: 50%;
-      font-size: 7rem;
-      transform: translateY(-50%);
-      *{color: #fff;}
-    }
-  }
-
-  h2 {
-    letter-spacing: -.08rem;
-    margin-bottom: 10px;
-    text-align: left;
-    font-size: 2rem;
-
-    &+p {
-      letter-spacing: -.08rem;
-      margin-bottom: 20px;
-      font-size: 1.5rem;
-      word-break: break-word;
-    }
-  }
-
-  ul {
-    margin-bottom: 10px;
-  }
-
-  .btn_wrap {
+  li {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    overflow: hidden;
+    border-width:10px;
+    border-top-left-radius: 100px 8px;
+    border-top-right-radius: 10px 300px;
+    border-bottom-right-radius: 100px 7px;
+    border-bottom-left-radius: 15px 200px;
+    box-shadow:1px 0px 0 6px #ebebeb;
+  
 
-    div {
+    &:after {
+      position: absolute;
+      z-index: -2;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: url("./../assets/images/img_sparkles.gif");
+      opacity: .3;
+    }
+
+    &>span {
+      font-size: 1.4rem;
+      writing-mode: vertical-rl;
+      letter-spacing: .5rem;
+      text-orientation: mixed;
+    }
+
+    .tumb {
+      position: absolute;
+      top: 10%;
+      left: -5%;
+      z-index: -1;
+      transform: rotate(20deg);
+
+      &>* {
+        font-size: 25rem;
+
+        path {
+          color: inherit;
+        }
+      }
+    }
+
+    .title {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 15px;
+
+      h2 {
+        letter-spacing: -.08rem;
+        text-align: left;
+        font-size: 2.5rem;
+        word-break: keep-all;
+      }
+    }
+
+    p {
+      height: 95px;
+      margin: 10px 0 20px;
+      padding-top: 10px;
+      border-top: 1px solid #fff;
+      letter-spacing: -.08rem;
+      font-size: 1.7rem;
+      word-break: break-word;
+
+      &+div {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    ul {
+      margin-bottom: 10px;
+    }
+
+    .category {
       position: relative;
 
-      span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50% -50%);
-      }
-    }
-  }
-
-  @keyframes test {
-    0% {
-      transform: rotate(0deg);
-    }
-
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  .category {
-    position: relative;
-
-    .btn_circle {
-      &+svg {
-        position: absolute;
-        top: 32%;
-        left: 35%;
-        font-size: 1.8rem;
-
-        * {
-          color: var(--color--main);
+      .btn_circle {
+        &+svg {
+          position: absolute;
+          top: 32%;
+          left: 35%;
+          font-size: 1.8rem;
         }
-      }
 
-      svg {
-        fill: currentColor;
-        width: 55px;
-        height: auto;
-        transform-origin: center;
-        animation: test 5s linear infinite;
+        @keyframes test {
+          0% {
+            transform: rotate(0deg);
+          }
 
-        * {
-          color: var(--shadow--list);
-          font-size: 2rem;
-          font-weight: normal;
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+
+        svg {
+          fill: currentColor;
+          width: 55px;
+          height: auto;
+          transform-origin: center;
+          animation: test 5s linear infinite;
+
+          * {
+            font-size: 2rem;
+            font-weight: normal;
+          }
         }
       }
     }
-
   }
-
-
 }

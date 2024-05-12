@@ -43,7 +43,8 @@ function Home() {
               test={project.skill}
               demo={project.demo}
               image={project.image}
-              theme={project.theme}
+              theme={project.themeColor}
+              subTheme={project.SubthemeColor}
               icon={project.icon}
             />
           ))}

@@ -13,7 +13,8 @@
     "skill": ["jQuery", "Zeplin"],
     "demo": "https://naraport.mof.go.kr/",
     "github":"",
-    "theme": "#00a49e",
+    "themeColor": "#003576",
+    "SubthemeColor": "#99ddff",
     "icon":"DropletFill"
   },
   {
@@ -30,7 +31,8 @@
     "demo": "https://www.weather.go.kr/w/typhoon/ko/weather/typhoon_02.jsp",
     "github":"",
     "image": "이미지~",
-    "theme": "#006ac7",
+    "themeColor": "#006ac7",
+    "SubthemeColor": "#006ac7",
     "icon":"Hurricane"
   },
   {
@@ -47,7 +49,8 @@
     "demo": "https://www.youtube.com/watch?v=UA7D8dTHnZU",
     "github":"",
     "image": "img_pews.png",
-    "theme": "#2c333e",
+    "themeColor": "#2c333e",
+    "SubthemeColor": "#2c333e",
     "icon":"Youtube"
   },
   {
@@ -64,7 +67,8 @@
     "demo": "https://www.weather.go.kr/pews/",
     "github":"",
     "image": "img_pews.png",
-    "theme": "#fe8328",
+    "themeColor": "#fe8328",
+    "SubthemeColor": "#fe8328",
     "icon":"GlobeCentralSouthAsia"
   },
   {
@@ -81,7 +85,8 @@
     "demo":"https://play.google.com/store/apps/details?id=com.kitvalley.kcgmobile&hl=ko&gl=US",
     "github":"",
     "image": "img_kcg.png",
-    "theme": "#475fff",
+    "themeColor": "#475fff",
+    "SubthemeColor": "#475fff",
     "icon":"LifePreserver"
   },
   {
@@ -98,7 +103,8 @@
     "demo": "https://eq.ndmi.go.kr/",
     "github":"",
     "image": "img_eqndmi.png",
-    "theme": "#176899",
+    "themeColor": "#176899",
+    "SubthemeColor": "#176899",
     "icon":"ShareFill"
   },
   {
@@ -115,7 +121,8 @@
     "demo": "",
     "github":"",
     "image": "이미지~",
-    "theme": "#90c31f",
+    "themeColor": "#90c31f",
+    "SubthemeColor": "#90c31f",
     "icon":"RocketTakeoffFill"
   },
   {
@@ -131,7 +138,8 @@
     "demo": "",
     "github":"",
     "image": "이미지~",
-    "theme": "#933dda",
+    "themeColor": "#933dda",
+    "SubthemeColor": "#933dda",
     "icon":"ClipboardDataFill"
   },
   {
@@ -148,7 +156,8 @@
     "demo": "",
     "github":"",
     "image": "이미지~",
-    "theme": "#d19d18",
+    "themeColor": "#d19d18",
+    "SubthemeColor": "#d19d18",
     "icon":"Activity"
   },
   {
@@ -165,7 +174,8 @@
     "demo": "",
     "github":"",
     "image": "이미지~",
-    "theme": "#006ac7",
+    "themeColor": "#006ac7",
+    "SubthemeColor": "#006ac7",
     "icon":"EnvelopeExclamationFill"
   },
   {
@@ -182,13 +192,15 @@
     "demo": "",
     "github":"",
     "image": "이미지~",
-    "theme": "#006ac7",
+    "themeColor": "#006ac7",
+    "SubthemeColor": "#006ac7",
     "icon":"BrightnessAltHighFill"
   },
   {
     "id": 13,
     "category": "개인",
     "period":"2021.03",
+    "client":"Portfolio",
     "name": "2021 포트폴리오",
     "detailImage": "이미지~",
     "description": "",
@@ -198,13 +210,15 @@
     "demo": "https://limyoursun.github.io/limsun/",
     "github":"",
     "image": "이미지~",
-    "theme": "#2b3ba0",
+    "themeColor": "#2b3ba0",
+    "SubthemeColor": "#2b3ba0",
     "icon":"BrightnessHighFill"
   },
   {
     "id": 14,
     "category": "개인",
     "period":"2020.08 - 2020.09",
+    "client":"Big Issue",
     "name": "빅이슈 코리아 홈페이지",
     "detailImage": "이미지~",
     "description": "Figma, jQuery를 이용하여 빅이슈 코리아의 홈페이지를 리디자인했습니다. 빅이슈의 상징색상인 레드 컬러를 활용하여 각 페이지의 요소를 강조하고, 브랜드 아이덴티티를 강화했습니다. 그누보드를 사용해 게시판 기능을 구현하였으며, 반응형 웹 디자인 적용을 통해 어떤 환경에서도 사이트를 편리하게 이용할 수 있도록 고민했습니다. 홈리스를 위한 기회를 창출하여 나아가는 빅이슈 코리아의 활동과 전신에 기초한 따뜻하고 인간적인 분위기를 녹여낸 웹사이트 제작을 의도했습니다. 깔끔한 레이아웃을 이용함으로써 매거진 홈페이지의 정체성을 유지하였습니다.",
@@ -214,14 +228,17 @@
     "demo": "",
     "github":"",
     "image": "img_bigissue.jpg",
-    "theme": "#ed1c24",
+    "themeColor": "#ed1c24",
+    "SubthemeColor": "#ed1c24",
     "icon":"Newspaper"
   },
   {
     "id": 15,
     "category": "개인",
     "period":"2020.09 - 2020.10",
+    "client":"Master Card",
     "name": "마스터카드 홈페이지",
+    "image": "이미지~",
     "detailImage": "이미지~",
     "description": "마스터카드는 전 세계 금융기관, 기업, 카드 소지자 및 가맹점 사이에서 중요한 경제적 연결고리를 제공하는 글로벌 기업입니다. 좌측 GNB와 다크모드를 사용하여 사용자의 다양성에 따른 사용성 향상을 의도했습니다. 남산타워 등 대한민국 랜드마크의 이미지를 활용한 디자인을 적용하였습니다.",
     "design": "",
@@ -229,14 +246,15 @@
     "skill": ["jQuery"],
     "demo": "https://limyoursun.github.io/mastercard/",
     "github":"",
-    "image": "이미지~",
-    "theme": "#ea6008",
+    "themeColor": "#f74636",
+    "SubthemeColor": "#ffc226",
     "icon":"CreditCardFill"
   },
   {
     "id": 16,
     "category": "개인",
     "period":"2020.09 - 2020.10",
+    "client":"Bose",
     "name": "보스 홈페이지",
     "detailImage": "이미지~",
     "description": "고도의 기술력을 자랑하는 오디오 브랜드 보스는 50년이 넘도록 최고의 브랜드로 자리하고 있습니다. 소수 애호가들이나 사용하던 오디오를 초보자도 즐길 수 있는 간단한 제품으로 만들며, 오디오의 전 세계적인 대중화를 이끌었습니다. 유서 깊고 전통적이면서 혁신적인 보스 브랜드의 이미지를 강조하는 홈페이지 제작을 하였습니다.",
@@ -246,7 +264,8 @@
     "demo": "https://limyoursun.github.io/bose/",
     "github":"",
     "image": "이미지~",
-    "theme": "#0b0909",
+    "themeColor": "#0b0909",
+    "SubthemeColor": "#0b0909",
     "icon":"SpeakerFill"
   }
 ]
