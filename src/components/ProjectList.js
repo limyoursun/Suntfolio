@@ -6,9 +6,9 @@ import style from "../styles/Home.module.scss";
 /* icon import */
 import {
   ThreeDots,
-  PersonBoundingBox,
+  PersonArmsUp,
   BriefcaseFill,
-  BoxArrowInUpRight
+  HouseDoorFill
 } from "react-bootstrap-icons";
 import * as Icons from "react-bootstrap-icons";
 
@@ -31,7 +31,7 @@ function Project({
   subTheme,
   icon,
 }) {
-  const BadgeIcon = category === "개인" ? PersonBoundingBox : BriefcaseFill;
+  const BadgeIcon = category === "개인" ? PersonArmsUp : BriefcaseFill;
   const IconComponent = Icons[icon];
 
   useEffect(() => {
@@ -59,12 +59,12 @@ function Project({
         </div>
         <p>
           {description.length > 100
-            ? `${description.slice(0, 100)}`
+            ? `${description.slice(0, 100)}··`
             : description}
         </p>
         <div>
           <Link to={demo} target="_blank" className="btn_site">
-            <BoxArrowInUpRight className="icon" />
+            <HouseDoorFill className="icon" />
           </Link>
           <Link to={`detail/${id}`} className="btn_site">
             <ThreeDots className="icon" />
