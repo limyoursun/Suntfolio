@@ -70,9 +70,9 @@
       gap: 15px;
 
       h2 {
-        letter-spacing: -.08rem;
+        letter-spacing: .2rem;
         text-align: left;
-        font-size: 2.5rem;
+        font-size: 2.7rem;
         word-break: keep-all;
       }
     }
@@ -83,8 +83,9 @@
       padding-top: 10px;
       border-top: 1px solid #fff;
       letter-spacing: -.08rem;
-      font-size: 1.7rem;
+      font-size: 1.9rem;
       word-break: break-word;
+      line-height:2.2rem;
 
       &+div {
         display: flex;
