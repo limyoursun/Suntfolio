@@ -42,17 +42,17 @@
 
     &>span {
       font-size: 1.6rem;
-      writing-mode: vertical-rl;
+      writing-mode: vertical-lr;
       letter-spacing: .5rem;
       text-orientation: mixed;
     }
 
     .tumb {
       position: absolute;
-      top: 8%;
-      left: -2%;
+      top: 3%;
+      right: -2%;
       z-index: -1;
-      transform: rotate(05deg);
+      transform: rotate(0deg);
 
       &>* {
         font-size: 25rem;

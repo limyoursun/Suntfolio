@@ -1,19 +1,17 @@
 import { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 
 /* css import */
 import style from "../styles/Detail.module.scss";
 
 /* component import */
+import Loading from "../components/Loading";
 import ProjectDetail from "../components/ProjectDetail";
 
 function Detail() {
   const {id} = useParams();
   const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState([]);
-  const container = useRef();
   
   const getProjects = async () => {
     const json = await (
@@ -28,17 +26,10 @@ function Detail() {
     getProjects();
   }, []);
 
-  useGSAP(() => {
-    gsap.to(".good", {rotation:360, duration:2, repeat: -1, repeatDelay: 2, ease:"bounce.out"}); 
-  }, {scope: container})
-
   return (
     <>
-      <div ref={container}>
-        <div className="good"></div>
-      </div>
       {loading ? (
-        <h1>Loading...</h1>
+        <Loading/>
       ) : (
         <>
           {projects
