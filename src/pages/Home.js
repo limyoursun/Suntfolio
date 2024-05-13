@@ -28,34 +28,34 @@ function Home() {
   return (
     <>
       {loading ? (
-        <Loading/>
+        <Loading />
       ) : (
-        <>
-        <div className="gallery">
-        <ul className={`cards ${style.project}`} >
-          {projects.map((project) => (
-            <Project
-              id={project.id}
-              category={project.category}
-              client={project.client}
-              name={project.name}
-              description={project.description}
-              test={project.skill}
-              demo={project.demo}
-              image={project.image}
-              theme={project.themeColor}
-              subTheme={project.SubthemeColor}
-              icon={project.icon}
-            />
-          ))}
-        </ul>
-        <div className="actions">
-          <button className="btn_prev">이전 프로젝트</button>
-          <button className="btn_next">다음 프로젝트</button>
+        <div>
+          <div className="gallery">
+            <ul className={`cards ${style.project}`}>
+              {projects.map((project) => (
+                <Project
+                  id={project.id}
+                  category={project.category}
+                  client={project.client}
+                  name={project.name}
+                  description={project.description}
+                  test={project.skill}
+                  demo={project.demo}
+                  image={project.image}
+                  theme={project.themeColor}
+                  subTheme={project.SubthemeColor}
+                  icon={project.icon}
+                />
+              ))}
+            </ul>
+            <div className="actions">
+              <button className="btn_prev">이전 프로젝트</button>
+              <button className="btn_next">다음 프로젝트</button>
+            </div>
+          </div>
+          <div className="drag-proxy"></div>
         </div>
-      </div>
-      <div className="drag-proxy"></div>
-        </>
       )}
     </>
   );
