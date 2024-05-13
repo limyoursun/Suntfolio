@@ -149,7 +149,7 @@ const CardSlide = () => {
         ease: "none",
       }
     );
-    console.log("`1");
+    return seamlessLoop;
   }
 
   // below is the dragging functionality (mobile-friendly too)...
