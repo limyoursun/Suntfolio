@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 /* css import */
 import style from "../styles/Home.module.scss";
@@ -15,9 +14,8 @@ import * as Icons from "react-bootstrap-icons";
 
 /* component import */
 import BtnCircle from "../components/BtnCircle";
-import CardSlide from "../components/CardSlide";
 
-function Project({
+function ProjectItem({
   key,
   id,
   client,
@@ -34,15 +32,9 @@ function Project({
   const BadgeIcon = category === "개인" ? PersonArmsUp : BriefcaseFill;
   const IconComponent = Icons[icon];
 
-  useEffect(() => {
-    CardSlide();
-  });
 
   return (
-    <li
-      key="project.id"
-      style={{ backgroundColor: `${theme}`, borderColor: `${theme}` }}
-    >
+    <>
       <span>{client}</span>
       <div className={style.tumb}>
         {IconComponent && <IconComponent style={{ color: `${subTheme}` }} />}
@@ -76,8 +68,8 @@ function Project({
           </Link>
         </div>
       </div>
-    </li>
+    </>
   );
 }
 
-export default Project;
+export default ProjectItem;
