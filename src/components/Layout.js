@@ -1,6 +1,7 @@
+import { Route, Routes } from "react-router-dom";
+
 /* css import */
 import style from "../styles/Layout.module.scss";
-import { Route, Routes } from "react-router-dom";
 
 /* page import */
 import Home from "../pages/Home";

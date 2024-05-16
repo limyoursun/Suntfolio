@@ -4,11 +4,8 @@ import { Link } from "react-router-dom";
 import style from "../styles/Detail.module.scss";
 
 /* icon import */
-import { ArrowRight } from "react-bootstrap-icons";
+import { HouseDoorFill } from "react-bootstrap-icons";
 import * as Icons from "react-bootstrap-icons";
-
-/* component import */
-import BtnBack from "../components/BtnBack";
 
 function ProjectDetail({
   period,
@@ -28,7 +25,6 @@ function ProjectDetail({
     <>
       <section className={style.detail_con}>
         <aside>
-          <BtnBack className="icon" />
           <p>
             이곳은 프로젝트에 대한 자세한 설명과 함께, 제가 맡은 역할과 작업한
             범위를 구체적으로 기재합니다.
@@ -42,10 +38,7 @@ function ProjectDetail({
         <article>
           <div className={style.con_info}>
             <div>
-              <h2>
-                {IconComponent && <IconComponent />}
-                {name}
-              </h2>
+              <h2>{name}</h2>
               <ul className="builtwith_wrap">
                 {skill.map((i) => (
                   <li key={i}>{i}</li>
@@ -55,7 +48,7 @@ function ProjectDetail({
               <p>{description}</p>
             </div>
             <Link to={demo} className="btn_site">
-              <ArrowRight className="icon" />
+              <HouseDoorFill className="icon" />
             </Link>
           </div>
           <ul>

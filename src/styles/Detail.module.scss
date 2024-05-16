@@ -1,22 +1,10 @@
 main:has(.detail_con) {
 
   &>.detail_con {
-    position:relative;
+    * {
+      font-family: "LeeSeoyun";
+    }
     height: 100%;
-    &::after{
-      position:absolute;
-      z-index:-1;
-      top: 0;
-      display: block;
-      content:'';
-      width:100%;
-      height:100%;
-      background-color:#8665f2;
-      border-radius:150px;
-    }
-    & * {
-      color: #fff;
-    }
     aside{
       padding-top:20px;
       text-align: center;
@@ -27,32 +15,32 @@ main:has(.detail_con) {
       }
     }
     article {
+      position: relative;
       width:80%;
+      display: flex;
       min-height: 100%;
       margin:0 auto;
       padding:40px 50px;
-      border: 10px solid #514d4a;
-      border-radius: 80px;
-      background-color:#232323;
-      .con_info{
-        display: flex;
-        gap:70px;
-        & > div{
-          flex:0 1 100%;
-          margin-bottom:50px;
-          h2{
-            margin-bottom: 30px;
-            font-size:2.5rem;
-            svg{margin-right:10px;}
-          }
-          ul{display: inline-block;}
-          em{font-size:1.4rem;}
-          p{font-size:1.5rem;
-          line-height:2rem;
-          word-break: keep-all;
-          }
-        }
+      border-width:10px;
+      outline: 3px solid #7f888c;
+      outline-offset: -2px;
+      border-top-left-radius: 100px 8px;
+      border-top-right-radius: 10px 300px;
+      border-bottom-right-radius: 100px 7px;
+      border-bottom-left-radius: 15px 200px;
+      box-shadow:1px 0px 0 6px #fff;
+      background-color:#ebebeb;
+      &::after{
+        position:absolute;
+        top: 0;
+        left: 50%;
+        display: block;
+        content:'';
+        width:2px;
+        height:100%;
+        background-color:#dbd9d9;
       }
+      &>*{flex:0 1 50%;}
       img{width:100%;}
     }
 

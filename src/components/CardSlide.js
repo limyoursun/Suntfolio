@@ -1,6 +1,6 @@
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import Draggable from "gsap/Draggable";
+import ScrollTrigger from "https://cdn.skypack.dev/pin/gsap@v3.7.0-XuftDStujHvFTRb7HIzL/mode=imports/unoptimized/ScrollTrigger.js";
+import Draggable from "https://cdn.skypack.dev/pin/gsap@v3.7.0-XuftDStujHvFTRb7HIzL/mode=imports/unoptimized/Draggable.js";
 
 const CardSlide = () => {
   gsap.registerPlugin(ScrollTrigger, Draggable);
@@ -79,7 +79,6 @@ const CardSlide = () => {
       trigger.scroll(scrollTo);
       trigger.update(); // by default, when we trigger.scroll(), it waits 1 tick to update().
     };
-  console.log("1");
 
   // when the user stops scrolling, snap to the closest item.
   ScrollTrigger.addEventListener("scrollEnd", () =>
@@ -98,7 +97,6 @@ const CardSlide = () => {
       return wrap(Math.floor(progress), scroll);
     }
     trigger.scroll(scroll);
-    console.log("2");
   }
 
   document
@@ -113,32 +111,44 @@ const CardSlide = () => {
     );
 
   function buildSeamlessLoop(items, spacing, animateFunc) {
-    let rawSequence = gsap.timeline({ paused: true }),
+    let rawSequence = gsap.timeline({ paused: true }), // this is where all the "real" animations live
       seamlessLoop = gsap.timeline({
+        // this merely scrubs the playhead of the rawSequence so that it appears to seamlessly loop
         paused: true,
-        repeat: -1,
+        repeat: -1, // to accommodate infinite scrolling/looping
         onRepeat() {
+          // works around a super rare edge case bug that's fixed GSAP 3.6.1
           this._time === this._dur && (this._tTime += this._dur - 0.01);
         },
         onReverseComplete() {
-          this.totalTime(this.rawTime() + this.duration() * 100);
+          this.totalTime(this.rawTime() + this.duration() * 100); // seamless looping backwards
         },
       }),
-      cycleDuration = spacing * items.length;
+      cycleDuration = spacing * items.length,
+      dur; // the duration of just one animateFunc() (we'll populate it in the .forEach() below...
 
-    let dur;
-    for (let i = 0; i < items.length * 3; i++) {
-      let anim = animateFunc(items[i % items.length]);
-      rawSequence.add(anim, i * spacing);
-      dur || (dur = anim.duration());
-    }
+    // loop through 3 times so we can have an extra cycle at the start and end - we'll scrub the playhead only on the 2nd cycle
+    items
+      .concat(items)
+      .concat(items)
+      .forEach((item, i) => {
+        let anim = animateFunc(items[i % items.length]);
+        rawSequence.add(anim, i * spacing);
+        dur || (dur = anim.duration());
+      });
 
+    // animate the playhead linearly from the start of the 2nd cycle to its end (so we'll have one "extra" cycle at the beginning and end)
     seamlessLoop.fromTo(
       rawSequence,
-      { time: cycleDuration + dur / 2 },
-      { time: "+=" + cycleDuration, duration: cycleDuration, ease: "none" }
+      {
+        time: cycleDuration + dur / 2,
+      },
+      {
+        time: "+=" + cycleDuration,
+        duration: cycleDuration,
+        ease: "none",
+      }
     );
-
     return seamlessLoop;
   }
 

@@ -14,8 +14,10 @@ import * as Icons from "react-bootstrap-icons";
 
 /* component import */
 import BtnCircle from "../components/BtnCircle";
+import CardSlide from "../components/CardSlide";
+import { useEffect } from "react";
 
-function ProjectItem({
+function Project({
   key,
   id,
   client,
@@ -32,9 +34,15 @@ function ProjectItem({
   const BadgeIcon = category === "개인" ? PersonArmsUp : BriefcaseFill;
   const IconComponent = Icons[icon];
 
+  useEffect(() => {
+    CardSlide();
+  });
 
   return (
-    <>
+    <li
+      key="project.id"
+      style={{ backgroundColor: `${theme}`, borderColor: `${theme}` }}
+    >
       <span>{client}</span>
       <div className={style.tumb}>
         {IconComponent && <IconComponent style={{ color: `${subTheme}` }} />}
@@ -68,8 +76,8 @@ function ProjectItem({
           </Link>
         </div>
       </div>
-    </>
+    </li>
   );
 }
 
-export default ProjectItem;
+export default Project;
