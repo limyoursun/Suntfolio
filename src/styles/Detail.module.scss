@@ -1,54 +1,82 @@
 main:has(.detail_con) {
   margin-top: 250px;
+
   &>.detail_con {
     margin-top: 20px;
+
     * {
+      font-size: 1.7rem;
       font-family: "LeeSeoyun";
     }
-    aside{
-      padding-top:20px;
+    h3{
+      display: inline-block;
+      font-size: 3rem;
       text-align: center;
-      p{
-        font-size:1.7rem;
-        letter-spacing:.2rem;
-      margin:15px 0 40px;
+      font-weight: bold;
+    }
+
+
+
+    .test_1{
+      &>li{
+        line-height:2rem;
+        &::before{
+          display: inline-block;
+          content:'';
+          width:10px;
+          height: 3px;
+          margin:0 5px 1px 0;
+          border-top:solid 2px #41403E;
+          border-top-left-radius: 255px 15px;
+        }
       }
     }
+
+
     article {
       position: relative;
-      width:1200px;
+      width: 1200px;
       display: flex;
-      gap:40px;
+      gap: 40px;
       min-height: 100%;
-      margin:0 auto;
-      padding:40px 50px;
+      margin: 0 auto;
+      padding: 40px 50px;
       outline-offset: -2px;
       background: url('../assets/images/img_notebook.png');
       background-size: contain;
+
       &::before,
-      &::after{
+      &::after {
         position: absolute;
-        left:-.5px;
+        left: -.5px;
         display: block;
-        content:'';
-        width:100%;
-        height:50px;
+        content: '';
+        width: 100%;
+        height: 50px;
         background-size: cover;
       }
-      &::before{
+
+      &::before {
         top: -50px;
-      background: url('../assets/images/img_notebook_top.png') no-repeat;
-      background-size: cover;
+        background: url('../assets/images/img_notebook_top.png') no-repeat;
+        background-size: cover;
 
       }
-      &::after{
+
+      &::after {
         bottom: -50px;
-      background: url('../assets/images/img_notebook_bottom.png') no-repeat;
-      background-size: cover;
+        background: url('../assets/images/img_notebook_bottom.png') no-repeat;
+        background-size: cover;
 
       }
-      &>*{flex:0 1 50%;}
-      img{width:100%;}
+
+      &>* {
+        flex: 0 1 50%;
+      }
+
+      img {
+        width: 100%;
+      }
     }
 
     button {
