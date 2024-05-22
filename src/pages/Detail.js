@@ -44,9 +44,11 @@ function Detail() {
               skill={project.skill}
               demo={project.demo}
               image={project.image}
-              theme={project.theme}
+              theme={project.themeColor}
+              subTheme={project.SubthemeColor}
               design={project.design}
               publishing={project.publishing}
+              icon={project.icon}
             />
           ))}
         </>
