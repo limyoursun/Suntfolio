@@ -17,6 +17,7 @@ main:has(.detail_con) {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  
 }
   .description {
     display: flex;
@@ -75,7 +76,6 @@ main:has(.detail_con) {
     font-weight: bold;
   }
 
-
   * {
     font-size: 1.7rem;
     font-family: "LeeSeoyun";
@@ -88,27 +88,10 @@ main:has(.detail_con) {
     gap: 70px;
     min-height: 100%;
     margin: 0 auto;
-    padding: 50px;
-    outline-offset: -2px;
-    background: url('../assets/images/img_notebook_top.png') no-repeat;
-    background-size:contain;
+    padding:50px;
+    background-image:url('./../assets/images/test.png');
+    background-size: contain;
 
-    &::before {
-      position: absolute;
-      z-index: -1;
-      top: 20px;
-      left: 0;
-      display: block;
-      content: '';
-      width: 100%;
-      height: calc(100% - 50px);
-      background-image:
-      linear-gradient(to right, #eee 1px, transparent 1px),
-      linear-gradient(to bottom, #eee 1px, transparent 1px),
-      url('../assets/images/img_notebook.png');
-      background-size:15px 15px, 15px 15px;
-      background-position: right 10px top;
-    }
 
     .con_info {
       .tumb {

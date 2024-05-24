@@ -31,7 +31,6 @@ function ProjectDetail({
           <h4 className={style.title}>{category}</h4>
           <span>{period}</span>
           <h3>{name}</h3>
-
           <div className={style.description_wrap}>
             <div className={style.description}>
               <div className={style.img_wrap}>
@@ -73,16 +72,16 @@ function ProjectDetail({
                 ipsum' will uncover many web sites still in their infancy.
               </p>
             </div>
+            <div className="parchment"></div>
+            <div className="parchment"></div>
           </div>
         </div>
         <div className={style.con_info}>
           <span>{client}</span>
           <span>{category}</span>
-
           <p>{description}</p>
           <Link to={demo}>demo</Link>
           <h3>{icon}</h3>
-
           <h3>{skill}</h3>
           <p>{design}</p>
           <p>{publishing}</p>
