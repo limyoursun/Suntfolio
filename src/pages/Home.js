@@ -37,14 +37,22 @@ function Home() {
                 <Project
                   id={project.id}
                   category={project.category}
+                  period={project.period}
                   client={project.client}
                   name={project.name}
-                  description={project.description}
-                  test={project.skill}
-                  demo={project.demo}
                   image={project.image}
-                  theme={project.themeColor}
-                  subTheme={project.SubthemeColor}
+                  image1={project.image1}
+                  image2={project.image2}
+                  image3={project.image3}
+                  description={project.description}
+                  description1={project.description1}
+                  description2={project.description2}
+                  description3={project.description3}
+                  skill={project.skill}
+                  demo={project.demo}
+                  github={project.github}
+                  color={project.color}
+                  subColor={project.subColor}
                   icon={project.icon}
                 />
               ))}

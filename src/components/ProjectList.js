@@ -18,18 +18,25 @@ import CardSlide from "../components/CardSlide";
 import { useEffect } from "react";
 
 function Project({
-  key,
   id,
-  client,
   category,
+  period,
+  client,
   name,
   image,
+  image1,
+  image2,
+  image3,
   description,
+  description1,
+  description2,
+  description3,
+  skill,
   demo,
-  test,
-  theme,
-  subTheme,
-  icon,
+  github,
+  color,
+  subColor,
+  icon
 }) {
   const BadgeIcon = category === "개인" ? PersonArmsUp : BriefcaseFill;
   const IconComponent = Icons[icon];
@@ -41,17 +48,17 @@ function Project({
   return (
     <li
       key="project.id"
-      style={{ backgroundColor: `${theme}`, borderColor: `${theme}` }}
+      style={{ backgroundColor: `${color}`, borderColor: `${color}` }}
     >
       <span>{client}</span>
       <div className={style.tumb}>
-        {IconComponent && <IconComponent style={{ color: `${subTheme}` }} />}
+        {IconComponent && <IconComponent style={{ color: `${subColor}` }} />}
       </div>
       <div>
         <div className={style.title}>
           <div>
             <div className="builtwith_wrap">
-              {test.map((g) => (
+              {skill.map((g) => (
                 <span key={g}>{g}</span>
               ))}
             </div>

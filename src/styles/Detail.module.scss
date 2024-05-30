@@ -6,19 +6,9 @@ main:has(.detail_con) {
     font-size: 1.7rem;
     font-family: "LeeSeoyun";
   }
-  
+
   img {
     width: 100%
-  }
-
-  h3 {
-    font-family: "RubikBubbles";
-    font-size: 7rem;
-    font-weight: normal;
-    color: #ECFFDC;
-    line-height: 6rem;
-    text-shadow: -1px -1px 0 darkgreen, 1px -1px 0 darkgreen, 1px 1px 0 darkgreen,
-      1px 1px 0 darkgreen;
   }
 
   .img_wrap {
@@ -58,50 +48,44 @@ main:has(.detail_con) {
   }
 
   .detail_con {
-    position: relative;
-    width: 100%;
-    gap: 7rem;
-    min-height: 100%;
-    text-align: center;
+    * {
+      color: inherit;
+    }
 
-    h3 {
-      position: relative;
-      display: inline-block;
-      margin: 3rem auto 6rem;
-      text-align: center;
-      
+    .info {
+      display: flex;
+      gap:1.5rem;
+      margin-bottom: 50px;
+      color: #fff;
 
-      &::before {
-        position: absolute;
-        z-index: -1;
-        top: -2rem;
-        left: -11.5rem;
-        transform: rotate(20deg);
-      }
+      li:has(h3){
+        flex:0 1 30%;
+        background-color: #ff0;
 
-      span {
-        position: absolute;
-        top: -0.5rem;
-        right: -6rem;
-        color: #fff;
-        font-size: 1.6rem;
-        font-weight: bold;
-        text-shadow: -1px -1px 0 #f38fdc;
-
-        &::before {
-          position: absolute;
-          z-index: -1;
-          top: 50%;
-          left: 50%;
-          transform: scale(.8) translate(-65%, -65%) rotate(5deg);
+        h3 {
+          font-size: 6rem;
+        }
+  
+        h4 {
+          font-size: 3rem;
         }
       }
+      li:has(ul){
+        flex:0 1 20%;
+        background-color: #f00;
+      }
+
+      li:has(p){
+        flex:0 1 50%;
+        background-color: #1770b6;
+      }
+      
     }
+
 
     .view_wrap {
       display: flex;
       flex-direction: column;
-      gap: 3rem;
 
       .main_view_wrap {
         display: flex;
@@ -121,14 +105,16 @@ main:has(.detail_con) {
           transform: rotate(5deg);
 
           &::before,
-          &::after{
+          &::after {
             position: absolute;
             z-index: -1;
             display: block;
           }
-          &::before{
+
+          &::before {
             top: -100%;
           }
+
           &::after {
             content: '';
             top: - calc($padding - .3rem);
@@ -153,6 +139,7 @@ main:has(.detail_con) {
 
       img {
         position: relative;
+        z-index: 1;
         width: 25rem;
         min-width: 25rem;
         height: 25rem;
@@ -202,11 +189,13 @@ main:has(.detail_con) {
           display: block;
           content: '';
         }
-        &::before{
+
+        &::before {
           top: -5rem;
           right: 0;
           transform: rotate(11deg);
         }
+
         &::after {
           top: 40%;
           left: -2%;
@@ -217,18 +206,19 @@ main:has(.detail_con) {
           transform: rotate(50deg);
         }
 
-        &:nth-child(1){
+        &:nth-child(1) {
           border-top-right-radius: 60% 70%;
           border-top-left-radius: 50% 85%;
           border-bottom-right-radius: 35% 60%;
           border-bottom-left-radius: 45% 90%;
           transform: rotate(359deg);
 
-          &::before{
+          &::before {
             top: -4rem;
             left: -1rem;
           }
-          &::after{
+
+          &::after {
             top: 32%;
             left: inherit;
             right: -2%;
