@@ -40,14 +40,17 @@ function Detail() {
               category={project.category}
               period={project.period}
               name={project.name}
-              description={project.description}
+              image={project.image}
+              image1={project.image1}
+              image2={project.image2}
+              image3={project.image3}
+              description1={project.description1}
+              description2={project.description2}
+              description3={project.description3}
               skill={project.skill}
               demo={project.demo}
-              image={project.image}
-              theme={project.themeColor}
-              subTheme={project.SubthemeColor}
-              design={project.design}
-              publishing={project.publishing}
+              color={project.color}
+              subColor={project.subColor}
               icon={project.icon}
             />
           ))}

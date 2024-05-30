@@ -8,83 +8,55 @@ import { HouseDoorFill } from "react-bootstrap-icons";
 import * as Icons from "react-bootstrap-icons";
 
 function ProjectDetail({
-  client,
   category,
+  period,
+  client,
   name,
   image,
-  description,
-  demo,
-  theme,
-  subTheme,
-  icon,
-  period,
+  image1,
+  image2,
+  image3,
+  description1,
+  description2,
+  description3,
   skill,
-  design,
-  publishing,
+  demo,
+  color,
+  subColor,
+  icon,
 }) {
   const IconComponent = Icons[icon];
 
   return (
     <>
       <section className={style.detail_con}>
-        <div>
-          <h4 className={style.title}>{category}</h4>
-          <span>{period}</span>
-          <h3>{name}</h3>
-          <div className={style.description_wrap}>
-            <div className={style.description}>
-              <div className={style.img_wrap}>
-                <img src={`../images/${image}`} alt={name} />
-              </div>
-              <div>
-                <span>{category}</span>
-                <span>{period}</span>
-                <span>{category}</span>
-              </div>
+        <h3 className="img_ribbon">
+          DESIGN
+          <br />
+          OVERVIEW<span className="img_bubble">Point Check</span>
+        </h3>
+        
+        <div className={style.view_wrap}>
+          
+        <div className={style.main_view_wrap}>
+            <div className={style.img_wrap}>
+              <img src={`../images/${image2}`} alt={name} />
             </div>
-            <div className={style.description}>
-              <p className={style.paragraph}>
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters, as opposed to using 'Content
-                here, content here', making it look like readable English. Many
-                desktop publishing packages and web page editors now use Lorem
-                Ipsum as their default model text, and a search for 'lorem
-                ipsum' will uncover many web sites still in their infancy.
-              </p>
-              <div className={style.img_wrap}>
-                <img src={`../images/${image}`} alt={name} />
-              </div>
-            </div>
-            <div className={style.description}>
-              <div className={style.img_wrap}>
-                <img src={`../images/${image}`} alt={name} />
-              </div>
-              <p className={style.paragraph}>
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters, as opposed to using 'Content
-                here, content here', making it look like readable English. Many
-                desktop publishing packages and web page editors now use Lorem
-                Ipsum as their default model text, and a search for 'lorem
-                ipsum' will uncover many web sites still in their infancy.
-              </p>
-            </div>
-            <div className="parchment"></div>
-            <div className="parchment"></div>
+            <p>{description2}</p>
           </div>
-        </div>
-        <div className={style.con_info}>
-          <span>{client}</span>
-          <span>{category}</span>
-          <p>{description}</p>
-          <Link to={demo}>demo</Link>
-          <h3>{icon}</h3>
-          <h3>{skill}</h3>
-          <p>{design}</p>
-          <p>{publishing}</p>
+          
+          <div className={style.part_view_wrap}>
+            <p style={{ boxShadow: `0px 6px 0 0px ${subColor}` }} className="img_butterfly_lilac">{description3}</p>
+            <img style={{ boxShadow: `0px 6px 0 0px ${color}`, borderColor:`${color}` }} src={`../images/${image3}`} alt={name} />
+          </div>
+          <div className={style.img_wrap}>
+            <img src={`../images/${image}`} alt={name} />
+          </div>
+          <div className={style.part_view_wrap}>
+            <img style={{ boxShadow: `0px 6px 0 0px ${color}`, borderColor:`${color}` }} src={`../images/${image1}`} alt={name} />
+            <p style={{ boxShadow: `0px 6px 0 0px ${subColor}` }} className="img_waves">{description1}</p>
+          </div>
+          
         </div>
       </section>
     </>
