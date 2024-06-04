@@ -1,7 +1,7 @@
 main:has(.detail_con) {
   position: relative;
   max-width: 1100px;
-  margin: 15rem auto 0;
+  margin: 15rem auto 10rem; // 배경 여백 수정할지 확인해보기
 
   * {
     font-size: 1.7rem;
@@ -21,8 +21,8 @@ main:has(.detail_con) {
     border-top-right-radius: 3px 100px;
     border-bottom-right-radius: 100px 3px;
     border-bottom-left-radius: 3px 100px;
-    background-color: #ffffee;
-    box-shadow: 1px 0px 0 10px #ffffee;
+    background-color: #ffffdb;
+    box-shadow: 1px 0px 0 10px #ffffdb;
 
     &::before,
     &::after {
@@ -50,7 +50,10 @@ main:has(.detail_con) {
 
   .detail_con {
     background: url('../assets/images/img_notebook_top.png') no-repeat top left -3px;
-    background-size:contain;
+    content:'CCCCCCCCCCCCCCccc';
+
+
+    background-size: contain;
     padding: 10rem 5rem;
 
     &::before {
@@ -63,52 +66,61 @@ main:has(.detail_con) {
       width: 100%;
       height: calc(100% - 50px);
       background-image:
-      linear-gradient(to right, #eee 1px, transparent 1px),
-      linear-gradient(to bottom, #eee 1px, transparent 1px),
-      url('../assets/images/img_notebook.png');
-      background-size:15px 15px, 15px 15px;
+        linear-gradient(to right, #eee 1px, transparent 1px),
+        linear-gradient(to bottom, #eee 1px, transparent 1px),
+        url('../assets/images/img_notebook.png');
+      background-size: 15px 15px, 15px 15px;
       background-position: right 10px top;
     }
+
     .info {
       display: flex;
       gap: 3rem;
       align-items: flex-end;
       margin-bottom: 50px;
 
-      li:has(h3){
-        flex:0 1 40%;
+      li:has(h3) {
+        flex: 0 1 40%;
 
         h3 {
           font-family: "RubikBubbles";
           font-size: 6rem;
           font-weight: normal;
         }
-  
+
         h4 {
           font-size: 3rem;
           font-weight: normal;
         }
       }
-      li:has(ul){
-        flex:0 1 30%;
 
-        .list_wrap{
-          li{
+      li:has(ul) {
+        flex: 0 1 30%;
+
+        .list_wrap {
+          li {
             display: inline-block;
             line-height: 2.5rem;
-            &::after{
+
+            &::after {
               content: '/';
               margin: 0 .5rem;
             }
-            &:last-child{
-              &::after{display: none;}
+
+            &:last-child {
+              &::after {
+                display: none;
+              }
             }
           }
         }
       }
 
-      li:has(p){
-        flex:0 1 30%;
+      li:has(p) {
+        flex: 0 1 30%;
+        p{
+          text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+        }
       }
     }
 
@@ -154,114 +166,96 @@ main:has(.detail_con) {
             background-color: #fff;
           }
         }
+
         .img_wrap {
           flex: 0 1 90%;
           transform: rotate(-2deg);
         }
       }
-    }
 
-    .part_view_wrap {
-      display: flex;
-      gap: 3rem;
-      align-items: center;
+      &>.part_view_wrap {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
 
-      img {
-        position: relative;
-        flex:0 1 50%;
-        z-index: 1;
-        width: 25rem;
-        min-width: 25rem;
-        height: 25rem;
-        min-height: 25rem;
-        margin: 2px;
-        object-fit: cover;
-        object-position: center center;
-        border: 1rem solid #fff;
-        border-top-left-radius: 65% 50%;
-        border-top-right-radius: 50% 50%;
-        border-bottom-right-radius: 50% 65%;
-        border-bottom-left-radius: 50% 50%;
-
-        &::before {
-          position: absolute;
-          display: inline-block;
-          content: '';
-          width: 1rem;
-          border-top: 1px dotted #000;
-          ;
-        }
-      }
-
-      p {
-        &+.img_waves{
-          &::before{
-            background-color: #1770b6;
+        &:last-child {
+          p::before {
+            transform: scaleX(1);
           }
         }
 
-        
-        position: relative;
-        flex: 0 1 100%;
-        padding: 3rem 5rem 3rem 3rem;
-        padding: 4rem;
-        border-width: .1rem;
-        border-color: #fff;
-        border-top-left-radius: 25% 35%;
-        border-top-right-radius: 35% 65%;
-        border-bottom-right-radius: 65% 55%;
-        border-bottom-left-radius: 25% 65%;
-        background-color: #fff;
-        word-break: break-all;
-        font-size: 2rem;
-        text-align: center;
-        box-shadow: 0px 6px 0 0px #373e1b;
-        transform: rotate(1deg);
+        img {
+          position: relative;
+          flex: 0 1 50%;
+          z-index: 1;
+          width: 25rem;
+          min-width: 25rem;
+          height: 25rem;
+          min-height: 25rem;
+          margin: 2px;
+          object-fit: cover;
+          object-position: center center;
+          border: 1rem solid #fff;
+          border-top-left-radius: 65% 50%;
+          border-top-right-radius: 50% 50%;
+          border-bottom-right-radius: 50% 65%;
+          border-bottom-left-radius: 50% 50%;
 
-        &::before,
-        &::after {
-          position: absolute;
-          display: block;
-          content: '';
+          &::before {
+            position: absolute;
+            display: inline-block;
+            content: '';
+            width: 1rem;
+            border-top: 1px dotted #000;
+            ;
+          }
         }
 
-        &::before {
-          top: -5rem;
-          right: 0;
-        }
-
-        &::after {
-          top: 40%;
-          left: -2%;
-          border-bottom: 2rem solid transparent;
-          border-top: 2rem solid transparent;
-          border-left: 2rem solid #fff;
-          border-right: 2rem solid transparent;
-          transform: rotate(50deg);
-        }
-
-        &:nth-child(1) {
-          border-top-right-radius: 60% 70%;
-          border-top-left-radius: 50% 85%;
-          border-bottom-right-radius: 35% 60%;
-          border-bottom-left-radius: 45% 90%;
+        &>p {
+          position: relative;
+          flex: 0 1 100%;
+          padding: 3rem 5rem 3rem 3rem;
+          padding: 4rem;
+          border-width: .1rem;
+          border-color: #fff;
+          border-top-left-radius: 25% 35%;
+          border-top-right-radius: 35% 65%;
+          border-bottom-right-radius: 65% 55%;
+          border-bottom-left-radius: 25% 65%;
+          background-color: #fff;
+          word-break: break-all;
+          font-size: 2rem;
+          text-align: center;
+          box-shadow: 0px 6px 0 0px #373e1b;
           transform: rotate(359deg);
+
+          &::before,
+          &::after {
+            position: absolute;
+            display: block;
+            content: '';
+          }
 
           &::before {
             top: -4rem;
             left: -1rem;
-            transform: rotate(11deg);
+            transform: scaleX(-1) rotate(11deg);
           }
 
           &::after {
-            top: 32%;
-            left: inherit;
+            top: 28%;
             right: -2%;
+            border-bottom: 2rem solid transparent;
+            border-top: 2rem solid transparent;
+            border-left: 2rem solid #fff;
+            border-right: 2rem solid transparent;
+            transform: rotate(50deg);
             transform: rotate(230deg);
           }
         }
       }
     }
+
   }
 
 }
