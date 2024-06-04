@@ -49,6 +49,7 @@ function Home() {
                   description2={project.description2}
                   description3={project.description3}
                   skill={project.skill}
+                  keyword={project.keyword}
                   demo={project.demo}
                   github={project.github}
                   color={project.color}
