@@ -11,7 +11,21 @@ import Data from "../data/project.json";
 
 function Detail() {
   const {id} = useParams();
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState([]);
+  
+  const getProjects = async () => {
+    const json = await (
+      await fetch(
+        `https://raw.githubusercontent.com/limyoursun/limyoursun.github.io/main/api/projects.json`
+      )
+    ).json();
+    setProjects(json);
+    setLoading(false);
+  };
+  useEffect(() => {
+    getProjects();
+  }, []);
 
   return (
     <>

@@ -44,6 +44,7 @@ function Project({
 
   useEffect(() => {
     CardSlide();
+
   });
 
   return (
@@ -58,11 +59,7 @@ function Project({
       <div>
         <div className={style.title}>
           <div>
-            <div className="builtwith_wrap">
-              {skill.map((g) => (
-                <span key={g}>{g}</span>
-              ))}
-            </div>
+            <span>{period}</span>
             <h2>{name}</h2>
           </div>
           <div className={style.category}>
@@ -79,7 +76,7 @@ function Project({
           <Link to={demo} target="_blank" className="btn_site">
             <HouseDoorFill className="icon" />
           </Link>
-          <Link to={`detail/${id}`} target="_blank" className="btn_site">
+          <Link to={`detail/${id}`} className="btn_site">
             <ThreeDots className="icon" />
           </Link>
         </div>

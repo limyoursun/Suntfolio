@@ -34,46 +34,55 @@ function ProjectDetail({
   return (
     <>
       <section className={style.detail_con}>
-        <ul className={style.info}>
-          <li>
+        <div className={style.info}>
+          <div>
             <h3>
               Project
               <br />
-              information
+              information <h4>: {name}</h4>
             </h3>
-            <h4>: {name}</h4>
-          </li>
-          <li>
-            <ul>
-              <li>
-                <ul className={style.list_wrap}>
-                  {skill.map((g) => (
-                    <li key={g}>{g}</li>
-                  ))}
-                </ul>
-              </li>
-              <li>
-                <ul className={style.list_wrap}>
-                  {keyword.map((h) => (
-                    <li key={h}>{h}</li>
-                  ))}
-                </ul>
-              </li>
-              <li>{period}</li>
-            </ul>
-          </li>
-          <li>
-            <p>{description}</p>
-          </li>
+            <Link to={demo} target="_blank" className="btn_site">
+              <HouseDoorFill className="icon" />
+            </Link>
+          </div>
+          <ul>
+            <li>
+              <ul className={style.list_wrap}>
+                {skill.map((g) => (
+                  <li key={g}>{g}</li>
+                ))}
+              </ul>
+            </li>
+            <li>
+              <ul className={style.list_wrap}>
+                {keyword.map((h) => (
+                  <li key={h}>{h}</li>
+                ))}
+              </ul>
+            </li>
+            <li>{period}</li>
+          </ul>
+          <p>{description}</p>
+        </div>
+
+        <ul className={style.grid}>
+          <li><img src={`../images/detail/${image}`} alt={name} /></li>
+          <li><img src={`../images/detail/${image1}`} alt={name} /></li>
+          <li><img src={`../images/detail/${image2}`} alt={name} /></li>
+          <li><img src={`../images/detail/${image3}`} alt={name} /></li>
+          <li><img src={`../images/detail/${image}`} alt={name} /></li>
+          <li><img src={`../images/detail/${image1}`} alt={name} /></li>
+          <li><img src={`../images/detail/${image2}`} alt={name} /></li>
+          <li><img src={`../images/detail/${image3}`} alt={name} /></li>
         </ul>
 
-        <div className={style.view_wrap}>
+        {/* <div className={style.view_wrap}>
           <div className={style.img_wrap}>
             <img src={`../images/detail/${image}`} alt={name} />
           </div>
           <div className={style.part_view_wrap}>
-            <p style={{ boxShadow: `0px 6px 0 0px ${subColor}` }} className="img_waves">{description1}</p>
-            <img style={{boxShadow: `0px 6px 0 0px ${color}`, borderColor: `${color}`}} src={`../images/detail/${image1}`} alt={name}/>
+            <p className="img_waves">{description1}</p>
+            <img src={`../images/detail/${image1}`} alt={name}/>
           </div>
           <div className={style.main_view_wrap}>
             <div className={style.img_wrap}>
@@ -82,10 +91,10 @@ function ProjectDetail({
             <p>{description2}</p>
           </div>
           <div className={style.part_view_wrap}>
-            <p style={{ boxShadow: `0px 6px 0 0px ${subColor}` }} className="img_butterfly_lilac">{description3}</p>
-            <img style={{boxShadow: `0px 6px 0 0px ${color}`, borderColor: `${color}`}} src={`../images/detail/${image3}`} alt={name}/>
+            <p className="img_butterfly_lilac">{description3}</p>
+            <img src={`../images/detail/${image3}`} alt={name}/>
           </div>
-        </div>
+        </div> */}
       </section>
     </>
   );

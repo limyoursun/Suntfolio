@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useLayoutEffect, isWindow } from "react";
 
 /* css import */
 import style from "../styles/Home.module.scss";
@@ -6,34 +6,20 @@ import style from "../styles/Home.module.scss";
 /* component import */
 import Project from "../components/ProjectList";
 import Loading from "../components/Loading";
+import Data from "../data/project.json";
 
 function Home() {
   const [loading, setLoading] = useState(false);
-  const [projects, setProjects] = useState([]);
-
-  const getProjects = async () => {
-    const json = await (
-      await fetch(
-        `https://raw.githubusercontent.com/limyoursun/limyoursun.github.io/main/api/projects.json`
-      )
-    ).json();
-    setProjects(json);
-    setLoading(false);
-  };
-
-  useEffect(() => {
-    getProjects();
-  }, []);
 
   return (
     <>
-      {loading ? (
+      {/* {loading ? (
         <Loading />
-      ) : (
+      ) : ( */}
         <div>
           <div className="gallery">
             <ul className={`cards ${style.project}`}>
-              {projects.map((project) => (
+              {Data.map((project) => (
                 <Project
                   id={project.id}
                   category={project.category}
@@ -65,7 +51,7 @@ function Home() {
           </div>
           <div className="drag-proxy"></div>
         </div>
-      )}
+      {/* )} */}
     </>
   );
 }
