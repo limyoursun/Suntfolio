@@ -15,6 +15,7 @@
   font-family: "RubikBubbles";
   font-weight: normal;
   src: url("./../assets/fonts/RubikBubbles-Regular.ttf") format("truetype");
+  unicode-range: U+0041-005A, U+0061-007A;
 }
 
 /* var */
@@ -71,7 +72,7 @@ $img_detail:
   padding: 0;
   box-sizing: border-box;
   color: var(--color--common);
-  font-family: "PretendardVariable";
+  font-family: "LeeSeoyun", "PretendardVariable", "RubikBubbles";
   font-size: 10px;
   font-style: normal;
 }
@@ -119,6 +120,7 @@ body {
 .btn_site {
   position: relative;
   display: inline-block;
+  min-width: 50px;
   width: 50px;
   height: 50px;
   line-height: 50px;
@@ -222,7 +224,20 @@ body {
   position: absolute;
 }
 
-
 ::-webkit-scrollbar{
   display: none; // 고민해보기
+}
+
+.ransom-note{
+  align-items: center;
+}
+.ransom-note span {
+  display: inline-block;
+  font-weight: bold;
+  padding: 0 .1rem;
+  transform: rotate(-2deg);
+  font-size: 70px;
+}
+.ransom-note>span:nth-child(even) {
+  transform: rotate(2deg);
 }

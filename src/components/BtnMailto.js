@@ -8,7 +8,7 @@ const ButtonMailto = ({ mailto, label }) => {
     return (
         <Link className={style.mail}  to='#' onClick={() => { window.open(mailto) }}
             alt={label}>
-          메일 보내기
+          메일 보내기{label}
         </Link>
     );
 };

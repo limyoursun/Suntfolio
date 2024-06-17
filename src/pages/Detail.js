@@ -29,13 +29,8 @@ function Detail() {
               client={project.client}
               name={project.name}
               image={project.image}
-              image1={project.image1}
-              image2={project.image2}
-              image3={project.image3}
               description={project.description}
-              description1={project.description1}
-              description2={project.description2}
-              description3={project.description3}
+              descriptions={project.descriptions}
               skill={project.skill}
               keyword={project.keyword}
               demo={project.demo}
