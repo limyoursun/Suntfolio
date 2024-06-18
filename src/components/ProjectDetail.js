@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
 
-/* css import */
-import style from "../styles/Detail.module.scss";
-
 /* icon import */
 import { HouseDoorFill } from "react-bootstrap-icons";
 import * as Icons from "react-bootstrap-icons";
@@ -28,8 +25,8 @@ function ProjectDetail({
 
   return (
     <>
-      <section className={style.detail_con}>
-        <div className={style.info}>
+      <section className="detail_con">
+        <div className="info">
             <div>
               <h3>{name}</h3>
               <Link to={demo} target="_blank" className="btn_site">
@@ -39,20 +36,20 @@ function ProjectDetail({
             <ul>
               <li>{period}</li>
               <li>
-                <ul className={style.list_wrap}>
+                <ul className="list_wrap">
                   {keyword.map((h) => (
                     <li key={h}>{h}</li>
                   ))}
                 </ul>
               </li>
             </ul>
-          <div className={style.list_wrap}>
+          <div className="list_wrap">
             {descriptions.map((i) => (
               <p key={i}>{i}</p>
             ))}
           </div>
         </div>
-        <ul className={style.grid}>
+        <ul className="grid">
           {image.map((j) => (
             <li key={j}><img src={`../images/detail/${j}`} alt={`${name} 상세 이미지`} /></li>
           ))}

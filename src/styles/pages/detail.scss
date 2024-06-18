@@ -15,7 +15,6 @@ main:has(.detail_con) {
     .info {
       position:relative;
       flex: 0 1 40%;
-      background-color: #fff;
 
       &::before{
         position:absolute;
@@ -24,7 +23,7 @@ main:has(.detail_con) {
         width: 100%;
         height:100px;
         content:'';
-        background:url(../assets/images/img_notebook_top.png) no-repeat top center;
+        // background:url(../../assets/images/img_notebook_top.png) no-repeat top center;
       }
       * {
         color: #fff;

@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 /* css import */
-import style from "../styles/Detail.module.scss";
+import style from "../styles/pages/detail.scss";
 
-/* component import */
 // import Loading from "../components/Loading";
 import ProjectDetail from "../components/ProjectDetail";
 import Data from "../data/project.json";

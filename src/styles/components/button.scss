@@ -1,0 +1,37 @@
+.icon {
+  font-size: 2rem;
+}
+
+.btn_site {
+  position: relative;
+  display: inline-block;
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  font-size: 1.7rem;
+  text-align: center;
+
+  * {
+    color: #fff;
+  }
+
+  &::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    border-radius: 6px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    border: 1px dashed #fff;
+    transform: translate(-50%, -50%);
+  }
+
+  .icon {
+    height: 100%;
+  }
+}

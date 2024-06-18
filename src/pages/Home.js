@@ -1,11 +1,10 @@
 import { useEffect, useState, useLayoutEffect, isWindow } from "react";
 
 /* css import */
-import style from "../styles/Home.module.scss";
-
+import style from "../styles/pages/home.scss";
 /* component import */
 import Project from "../components/ProjectList";
-import Loading from "../components/Loading";
+// import Loading from "../components/Loading";
 import Data from "../data/project.json";
 
 function Home() {
@@ -18,7 +17,7 @@ function Home() {
       ) : ( */}
         <div>
           <div className="gallery">
-            <ul className={`cards ${style.project}`}>
+            <ul className="cards project">
               {Data.map((project) => (
                 <Project
                   id={project.id}

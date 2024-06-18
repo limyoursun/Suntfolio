@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
 
-/* css import */
-import style from "../styles/Home.module.scss";
-
 /* icon import */
 import {
   ThreeDots,
@@ -53,16 +50,16 @@ function Project({
       style={{ backgroundColor: `${color}`, borderColor: `${color}` }}
     >
       <span>{client}</span>
-      <div className={style.tumb}>
+      <div className="tumb">
         {IconComponent && <IconComponent style={{ color: `${subColor}` }} />}
       </div>
       <div>
-        <div className={style.title}>
+        <div className="title">
           <div>
             <span>{period}</span>
             <h2>{name}</h2>
           </div>
-          <div className={style.category}>
+          <div className="category">
             <BtnCircle />
             <BadgeIcon />
           </div>

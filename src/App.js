@@ -1,5 +1,5 @@
 /* css import */
-import "./styles/global.scss";
+import "./styles/style.scss";
 
 /* components import */
 import Header from "./components/Header";

@@ -1,0 +1,36 @@
+@import "./variable";
+
+// Mixins
+@mixin respond-to($breakpoints...) {
+  @each $breakpoint in $breakpoints{
+    @if $breakpoint == mobile {
+      @media (max-width: $breakpoint-mobile) {
+        @content;
+      }
+    }
+  
+    @else if $breakpoint == tabletToMobile {
+      @media all and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+        @content;
+      }
+    }
+  
+    @else if $breakpoint == tablet {
+      @media (max-width: $breakpoint-tablet) {
+        @content;
+      }
+    }
+  
+    @else if $breakpoint == desktopToLaptop {
+      @media all and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+        @content;
+      }
+    }
+  
+    @else if $breakpoint == desktop {
+      @media (min-width: $breakpoint-desktop) {
+        @content;
+      }
+    }
+  }
+}

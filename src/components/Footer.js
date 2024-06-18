@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
 
-/* css import */
-import style from "../styles/Footer.module.scss";
-
 /* component import */
 import ButtonMailto from "../components/BtnMailto";
 
@@ -12,7 +9,7 @@ const Footer = () => {
     <footer>
       <div>
         <ButtonMailto label="임선 이메일 주소" mailto="mailto:limyoursun@naver.com" />
-        <button className={style.github} onClick={() => { window.open(url) }}>GITHUB </button>
+        <button className="github" onClick={() => { window.open(url) }}>GITHUB </button>
       </div>
       <table>
         <caption>page info</caption>

@@ -1,6 +1,3 @@
-/* css import */
-import './../styles/Header.module.scss'
-
 const Header = () => {
     return(
         <header>

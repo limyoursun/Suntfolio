@@ -1,0 +1,16 @@
+/* theme */
+:root {
+  --color--common: #333;
+  --color--list: #fff;
+  --bg--list: #242424;
+  --color--main: #999;
+  --shadow--list: #222;
+  --bg--key: #ffe96c;
+  --bg--box: #ddd;
+}
+
+/* media query */
+$breakpoint-mobile: 480px; // 모바일
+$breakpoint-tablet: 768px; // 테블릿
+$breakpoint-laptop: 1024px; // 노트북
+$breakpoint-desktop: 1280px; // 데스크탑

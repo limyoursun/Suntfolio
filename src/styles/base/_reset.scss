@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--color--common);
+  font-family: "LeeSeoyun", "PretendardVariable", "RubikBubbles";
+  font-size: 10px;
+  font-style: normal;
+
+  @include respond-to(mobile) {
+    font-size: 8px;
+  }
+  @include respond-to(tabletToMobile) {
+    font-size: 8.5px;
+  }
+  @include respond-to(tablet) {
+    font-size: 9px;
+  }
+  @include respond-to(desktopToLaptop) {
+    font-size: 9.5px;
+  }
+  @include respond-to(desktop) {
+    font-size: 10px;
+  }
+
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}

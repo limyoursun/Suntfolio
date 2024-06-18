@@ -1,0 +1,208 @@
+@import "./../utils/variable";
+@import "./../utils/mixin";
+
+.gallery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  * {
+    color: #fff;
+  }
+
+  .cards {
+    position: absolute;
+    width: 35rem;
+    height: 50rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include respond-to(mobile, tabletToMobile) {
+        width: 30rem;
+        height: 45rem;
+    }
+
+    li {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      padding: 2.5rem;
+      overflow: hidden;
+      border-width: 10px;
+      border-top-left-radius: 10rem .8rem;
+      border-top-right-radius: 1rem 30rem;
+      border-bottom-right-radius: 10rem .7rem;
+      border-bottom-left-radius: 1.5rem 20rem;
+      box-shadow: 1px 0px 0 6px #fff;
+
+      &:after {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background: url("./../../assets/images/img_sparkles.gif");
+        opacity: .3;
+      }
+
+      &>span {
+        font-size: 1.6rem;
+        writing-mode: vertical-lr;
+        letter-spacing: .5rem;
+        text-orientation: mixed;
+      }
+
+      .tumb {
+        position: absolute;
+        top: 5%;
+        right: -2%;
+        z-index: -1;
+        transform: rotate(0deg);
+
+        &>* {
+          font-size: 25rem;
+
+          path {
+            color: inherit;
+          }
+        }
+      }
+
+      .title {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 15px;
+
+        span {
+          font-size: 1.4rem;
+        }
+
+        h2 {
+          margin-bottom: .5rem;
+          letter-spacing: .2rem;
+          text-align: left;
+          font-size: 2.7rem;
+          word-break: keep-all;
+        }
+      }
+
+      p {
+        height: 95px;
+        margin: 10px 0 15px;
+        padding-top: 10px;
+        border-top: 1px solid #fff;
+        letter-spacing: -.08rem;
+        font-size: 1.9rem;
+        word-break: break-word;
+        line-height: 2.2rem;
+
+        &+div {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      ul {
+        margin-bottom: 10px;
+      }
+
+      .category {
+        position: relative;
+
+        .btn_circle {
+          &+svg {
+            position: absolute;
+            top: 33%;
+            left: 35%;
+            font-size: 1.8rem;
+          }
+
+          @keyframes test {
+            0% {
+              transform: rotate(0deg);
+            }
+
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+
+          svg {
+            fill: currentColor;
+            width: 55px;
+            height: auto;
+            transform-origin: center;
+            animation: test 5s linear infinite;
+
+            * {
+              font-size: 2rem;
+              font-weight: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .actions {
+    button {
+      position: fixed;
+      top: 50%;
+      border: none;
+      background: transparent;
+      background-size: contain;
+      background-repeat: no-repeat;
+      font-size: 0;
+      transform: translateY(-50%);
+
+      &:hover {
+        @keyframes identifier {
+          0% {
+            filter: invert(1);
+          }
+
+          50% {
+            filter: invert(0);
+          }
+        }
+
+        animation: identifier .8s infinite steps(1, end);
+      }
+
+      &.btn_prev {
+        left: 10%;
+        width: 75px;
+        height: 105px;
+        background-image: url(./../../assets/images/btn_arrow_left.png);
+      }
+
+      &.btn_next {
+        right: 10%;
+        width: 110px;
+        height: 82px;
+        background-image: url(./../../assets/images/btn_arrow_right.png);
+      }
+    }
+  }
+}
+.drag-proxy {
+  visibility: hidden;
+  position: absolute;
+}
+
+@include respond-to(mobile) {
+  .actions{
+    display: none;
+  }
+}

@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 
 /* css import */
-import style from "../styles/Home.module.scss";
 
 function BtnCircle({category}) {
   return (
-    <div className={style.btn_circle}>
+    <div className="btn_circle">
       <svg viewBox="0 0 100 100">
         <defs>
           <path

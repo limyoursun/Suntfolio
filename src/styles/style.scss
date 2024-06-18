@@ -1,0 +1,20 @@
+// Util styles
+@import 'utils/mixin';
+@import 'utils/variable';
+
+// Base styles
+@import 'base/reset';
+@import 'base/typography';
+
+// component styles
+@import 'components/button';
+
+// Layout styles
+@import 'layout/header';
+@import 'layout/footer';
+
+body {
+  background: url("./../assets/images/bg_clouds.jpg") bottom no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
