@@ -36,12 +36,14 @@
       height: 100%;
       padding: 2.5rem;
       overflow: hidden;
-      border-width: 10px;
       border-top-left-radius: 10rem .8rem;
       border-top-right-radius: 1rem 30rem;
       border-bottom-right-radius: 10rem .7rem;
       border-bottom-left-radius: 1.5rem 20rem;
       box-shadow: 1px 0px 0 6px #fff;
+      @include respond-to(mobile, tabletToMobile) {
+        padding: 2rem;
+      }
 
       &:after {
         position: absolute;
@@ -68,6 +70,11 @@
         right: -2%;
         z-index: -1;
         transform: rotate(0deg);
+        @include respond-to(mobile) {
+          top: -5%;
+          right: -10%;
+          transform: scale(70%);
+        }
 
         &>* {
           font-size: 25rem;
@@ -83,11 +90,9 @@
         align-items: flex-end;
         justify-content: space-between;
         gap: 15px;
-
         span {
           font-size: 1.4rem;
         }
-
         h2 {
           margin-bottom: .5rem;
           letter-spacing: .2rem;
@@ -96,7 +101,6 @@
           word-break: keep-all;
         }
       }
-
       p {
         height: 95px;
         margin: 10px 0 15px;
@@ -118,6 +122,7 @@
       }
 
       .category {
+        flex: 0 1 20%;
         position: relative;
 
         .btn_circle {
@@ -156,6 +161,9 @@
   }
 
   .actions {
+    @include respond-to(mobile, tabletToMobile) {
+      display: none;
+    }
     button {
       position: fixed;
       top: 50%;
@@ -185,6 +193,9 @@
         width: 75px;
         height: 105px;
         background-image: url(./../../assets/images/btn_arrow_left.png);
+        @include respond-to(desktopToLaptop) {
+          left: 5%;
+        }
       }
 
       &.btn_next {
@@ -192,6 +203,9 @@
         width: 110px;
         height: 82px;
         background-image: url(./../../assets/images/btn_arrow_right.png);
+        @include respond-to(desktopToLaptop) {
+          right: 5%;
+        }
       }
     }
   }
@@ -199,10 +213,4 @@
 .drag-proxy {
   visibility: hidden;
   position: absolute;
-}
-
-@include respond-to(mobile) {
-  .actions{
-    display: none;
-  }
 }

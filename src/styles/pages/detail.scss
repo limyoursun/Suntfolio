@@ -1,9 +1,16 @@
+@import "./../utils/variable";
+@import "./../utils/mixin";
+
 main:has(.detail_con) {
   position: relative;
   width: 100%;
   max-width: 1200px;
   margin: 21rem auto 0; // 배경 여백 수정할지 확인해보기
-
+  padding: 2rem;
+  @include respond-to(mobile) {
+    margin: 15vh auto 0;
+  }
+  
   * {
     font-size: 1.7rem;
   }
@@ -11,6 +18,24 @@ main:has(.detail_con) {
   .detail_con {
     display: flex;
     gap: 3rem;
+    @include respond-to(mobile) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    & *::-webkit-scrollbar {
+      width: 7px;
+    }
+    & *::-webkit-scrollbar-thumb {
+      background-color: #fff;
+      border-radius: 10px;
+      background-clip: padding-box;
+      border: 2px solid transparent;
+    }
+    & *::-webkit-scrollbar-track {
+      background-color: transparent;
+      border-radius: 10px;
+      box-shadow: inset 0px 0px 5px white;
+    }
 
     .info {
       position:relative;
@@ -33,12 +58,18 @@ main:has(.detail_con) {
       &>div:first-child {
         display: flex;
         align-items: flex-end;
+        @include respond-to(mobile) {
+          align-items: center;
+        }
         
         h3 {
           flex-grow: 1;
           font-size: 4rem;
           word-break: keep-all;
           font-weight: bold;
+          @include respond-to(mobile) {
+            font-size: 3rem;
+          }
           a{
             align-items: flex-end;
             flex-grow: 0;
@@ -52,6 +83,10 @@ main:has(.detail_con) {
         margin-bottom: 2rem;
         padding-bottom: 2rem;
         border-bottom: 1px solid #fff;
+        @include respond-to(mobile) {
+          margin-bottom: 1rem;
+          padding-bottom: 1rem;
+        }
         ul>li {
           display: inline-block;
           &::after {
@@ -71,6 +106,9 @@ main:has(.detail_con) {
         letter-spacing: normal;
         letter-spacing: 1px;
         line-height: 1.8rem;
+        @include respond-to(mobile) {
+          height: 17vh;
+        }
         p{
           margin-bottom: 1rem;
           color: inherit;
@@ -86,6 +124,18 @@ main:has(.detail_con) {
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       padding: 0 1rem;
       overflow-y: auto;
+      @include respond-to(mobile) {
+        display: block;
+        flex: none;
+        height: 20vh;
+        overflow-y: scroll;
+        white-space: nowrap;
+        padding: 0;
+        li{
+          display: inline-block;
+          height: 100%;
+        }
+      }
       li>img {
         width: 100%;
         height: 100%;

@@ -11,26 +11,38 @@ footer {
   background-color: transparent;
   color: var(--color--list);
   line-height: 70px;
-
+  @include respond-to(mobile) {
+    display: block;
+    height: auto;
+    text-align: center;
+  }
   * {font-family: "DM Serif Display";}
 
   div {
-
+    @include respond-to(mobile) {
+      display: flex;
+      justify-content: space-between;
+    }
     .mail,
     .github{
       display: block;
-      width: 80px;
-      height: 70px;
+      width: 8rem;
+      height: 7rem;
       border: none;
       background-color: transparent;
       background-repeat: no-repeat;
       background-position: center center;
       background-size: contain;
       font-size: 0;
+      @include respond-to(mobile, tabletToMobile) {
+        width: 7rem;
+        height: 6rem;
+      }
     }
 
     .mail {
       background-image: url(./../../assets/images/img_mail.png);
+      margin-bottom: 2rem;
       &:hover {
         background-image: url(./../../assets/images/img_mail.gif)
       }
@@ -46,7 +58,10 @@ footer {
 
   table {
     border: 1px solid #000;
-
+    @include respond-to(mobile) {
+      width:100%;
+      margin-top:1vh;
+    }
     * {
       font-size: 1.3rem;
       line-height: 1.2rem;
@@ -55,8 +70,13 @@ footer {
 
     td {
       padding: 2px 5px;
+      
+      @include respond-to(mobile) {
+        padding:0;
+      }
 
       &:has(span) {
+        text-align: center;
         vertical-align: bottom;
         border-right: 1px solid #000;
       }
