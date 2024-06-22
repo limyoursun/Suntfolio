@@ -16,6 +16,9 @@ footer {
     height: auto;
     text-align: center;
   }
+  @include respond-to(tabletToMobile, tablet, desktopToLaptop) {
+    height: 10vh;
+  }
   * {font-family: "DM Serif Display";}
 
   div {

@@ -20,10 +20,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    @include respond-to(mobile, tabletToMobile) {
-        width: 30rem;
-        height: 45rem;
-    }
 
     li {
       position: absolute;
@@ -41,9 +37,6 @@
       border-bottom-right-radius: 10rem .7rem;
       border-bottom-left-radius: 1.5rem 20rem;
       box-shadow: 1px 0px 0 6px #fff;
-      @include respond-to(mobile, tabletToMobile) {
-        padding: 2rem;
-      }
 
       &:after {
         position: absolute;
@@ -102,14 +95,20 @@
         }
       }
       p {
+        width: 100%;
         height: 95px;
         margin: 10px 0 15px;
         padding-top: 10px;
         border-top: 1px solid #fff;
         letter-spacing: -.08rem;
         font-size: 1.9rem;
-        word-break: break-word;
+        word-break: break-all;
         line-height: 2.2rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
 
         &+div {
           display: flex;
@@ -161,7 +160,7 @@
   }
 
   .actions {
-    @include respond-to(mobile, tabletToMobile) {
+    @include respond-to(mobile) {
       display: none;
     }
     button {
@@ -193,8 +192,9 @@
         width: 75px;
         height: 105px;
         background-image: url(./../../assets/images/btn_arrow_left.png);
-        @include respond-to(desktopToLaptop) {
+        @include respond-to(tablet) {
           left: 5%;
+          transform: scale(90%);
         }
       }
 
@@ -203,8 +203,10 @@
         width: 110px;
         height: 82px;
         background-image: url(./../../assets/images/btn_arrow_right.png);
-        @include respond-to(desktopToLaptop) {
+        @include respond-to(tablet) {
           right: 5%;
+          transform: scale(90%);
+          background-color: rgb(162, 163, 238);
         }
       }
     }
