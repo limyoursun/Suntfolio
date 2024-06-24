@@ -10,14 +10,8 @@
   @include respond-to(mobile) {
     font-size: 8px;
   }
-  @include respond-to(tabletToMobile) {
-    font-size: 8.5px;
-  }
   @include respond-to(tablet) {
     font-size: 9px;
-  }
-  @include respond-to(desktopToLaptop) {
-    font-size: 9.5px;
   }
   @include respond-to(desktop) {
     font-size: 10px;

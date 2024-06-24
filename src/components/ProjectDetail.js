@@ -25,36 +25,36 @@ function ProjectDetail({
 
   return (
     <>
-      <section className="detail_con">
-        <div className="info">
-            <div>
-              <h3>{name}</h3>
-              <Link to={demo} target="_blank" className="btn_site">
-                <HouseDoorFill className="icon" />
-              </Link>
-            </div>
-            <ul>
-              <li>{period}</li>
-              <li>
-                <ul className="list_wrap">
-                  {keyword.map((h) => (
-                    <li key={h}>{h}</li>
-                  ))}
-                </ul>
-              </li>
-            </ul>
-          <div className="list_wrap">
-            {descriptions.map((i) => (
-              <p key={i}>{i}</p>
-            ))}
-          </div>
+      <div className="info">
+        <div>
+          <h3>{name}</h3>
+          <Link to={demo} target="_blank" className="btn_site">
+            <HouseDoorFill className="icon" />
+          </Link>
         </div>
-        <ul className="grid">
-          {image.map((j) => (
-            <li key={j}><img src={`../images/detail/${j}`} alt={`${name} 상세 이미지`} /></li>
-          ))}
+        <ul>
+          <li>{period}</li>
+          <li>
+            <ul className="list_wrap">
+              {keyword.map((h) => (
+                <li key={h}>{h}</li>
+              ))}
+            </ul>
+          </li>
         </ul>
-      </section>
+        <div className="list_wrap">
+          {descriptions.map((i) => (
+            <p key={i}>{i}</p>
+          ))}
+        </div>
+      </div>
+      <ul className="grid">
+        {image.map((j) => (
+          <li key={j}>
+            <img src={`../images/detail/${j}`} alt={`${name} 상세 이미지`} />
+          </li>
+        ))}
+      </ul>
     </>
   );
 }

@@ -1,135 +1,155 @@
 @import "./../utils/variable";
 @import "./../utils/mixin";
 
-main:has(.detail_con) {
+main:has(.info) {
   position: relative;
+  display: flex;
   width: 100%;
   max-width: 1200px;
-  height: calc(100vh - 11rem);
-  margin: 11rem auto 0; // 배경 여백 수정할지 확인해보기
+  height: calc(100vh - 17rem);
+  margin: 11rem auto 0;
   padding: 2rem;
-  
+  gap: 3rem;
+  @include respond-to(mobile) {
+    flex-direction: column;
+  }
   * {
     font-size: 1.7rem;
   }
 
-  .detail_con {
-    display: flex;
-    height: 100%;
-    gap: 3rem;
+  .info {
+    position: relative;
+    flex: 0 1 40%;
 
-    .info {
-      position:relative;
-      flex: 0 1 40%;
-      @include respond-to(tablet) {
-        flex: 0 1 50%;
-      }
-      &::before{
-        position:absolute;
-        top: -10px;
-        display: block;
-        width: 100%;
-        height:100px;
-        content:'';
-      }
-      * {
-        color: #fff;
-        font-weight: normal;
-      }
-
-      &>div:first-child {
-        display: flex;
-        align-items: flex-end;
-        @include respond-to(mobile) {
-          align-items: center;
-        }
-        
-        h3 {
-          flex-grow: 1;
-          font-size: 4rem;
-          word-break: keep-all;
-          font-weight: bold;
-          @include respond-to(mobile) {
-            font-size: 3rem;
-          }
-          a{
-            align-items: flex-end;
-            flex-grow: 0;
-            flex-shrink: 0;
-            margin-left: 1rem;
-            vertical-align: middle;
-          }
-        }
-      }
-      &>ul {
-        margin-bottom: 2rem;
-        padding-bottom: 2rem;
-        border-bottom: 1px solid #fff;
-        @include respond-to(mobile) {
-          margin-bottom: 1rem;
-          padding-bottom: 1rem;
-        }
-        ul>li {
-          display: inline-block;
-          &::after {
-            content: '|';
-            margin:0 .5rem;
-          }
-          &:last-child::after {
-            display: none;
-          }
-        }
-      }
-
-      &>div:last-child {
-        height: calc(100vh - 51rem);
-        overflow-y: auto;
-        font-size: 1.8rem;
-        letter-spacing: normal;
-        letter-spacing: 1px;
-        line-height: 1.8rem;
-        @include respond-to(mobile) {
-          height: 20vh;
-        }
-        p{
-          margin-bottom: 1rem;
-          color: inherit;
-        }
-      }
+    @include respond-to(tablet) {
+      flex: 0 1 50%;
     }
 
-    .grid {
-      flex: 0 1 100%;
-      display: grid;
-      height: 100%;
-      gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      padding: 0 1rem;
-      overflow-y: auto;
+    &::before {
+      position: absolute;
+      top: -10px;
+      display: block;
+      width: 100%;
+      height: 100px;
+      content: '';
+    }
+
+    * {
+      color: #fff;
+      font-weight: normal;
+    }
+
+    &>div:first-child {
+      display: flex;
+      align-items: flex-end;
+
       @include respond-to(mobile) {
-        display: block;
-        flex: none;
-        height: 25vh;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        white-space: nowrap;
-        margin: 0;
-        padding: 0;
-        li{
-          display: inline-block;
-          height: 100%;
+        align-items: center;
+      }
+
+      h3 {
+        flex-grow: 1;
+        font-size: 4rem;
+        word-break: keep-all;
+        font-weight: bold;
+
+        @include respond-to(mobile) {
+          font-size: 3rem;
         }
-      }
-      @include respond-to(tablet) {
-        flex: 0 1 50%;
-      }
-      li>img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center center;
+
+        a {
+          align-items: flex-end;
+          flex-grow: 0;
+          flex-shrink: 0;
+          margin-left: 1rem;
+          vertical-align: middle;
+        }
       }
     }
 
+    &>ul {
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #fff;
+
+      @include respond-to(mobile) {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+      }
+
+      ul>li {
+        display: inline-block;
+
+        &::after {
+          content: '|';
+          margin: 0 .5rem;
+        }
+
+        &:last-child::after {
+          display: none;
+        }
+      }
+    }
+
+    &>div:last-child {
+      height: calc(100vh - 51rem);
+      overflow-y: auto;
+      font-size: 1.8rem;
+      letter-spacing: normal;
+      letter-spacing: 1px;
+      line-height: 1.8rem;
+
+      @include respond-to(mobile) {
+        height: 20vh;
+      }
+
+      p {
+        margin-bottom: 1rem;
+        color: inherit;
+      }
+    }
   }
+
+  .grid {
+    flex: 0 1 100%;
+    display: grid;
+    height: 100%;
+    gap: 2rem;
+    padding: 0 1rem;
+    overflow-y: auto;
+
+    @include respond-to(mobile) {
+      // 보류
+    }
+
+    @include respond-to(tablet) {
+      flex: 0 1 60%;
+    }
+    @include respond-to(laptop){
+      &>li:nth-child(1){
+        grid-column: span 2;
+      }
+      &>li:nth-child(3){
+        grid-row: span 2;
+      }
+    }
+    @include respond-to(desktop){
+      &>li:nth-child(1){
+        grid-column: span 2;
+      }
+      &>li:nth-child(2){
+        grid-column: 3 / 4;
+      }
+      &>li:nth-child(3){
+        grid-area: 2/ 3 / 4 / 4;
+      }
+    }
+    li>img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
 }

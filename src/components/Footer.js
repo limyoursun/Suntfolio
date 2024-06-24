@@ -8,8 +8,8 @@ const Footer = () => {
   return (
     <footer>
       <div>
-        <ButtonMailto label="임선 이메일 주소" mailto="mailto:limyoursun@naver.com" />
         <button className="github" onClick={() => { window.open(url) }}>GITHUB </button>
+        <ButtonMailto label="임선 이메일 주소" mailto="mailto:limyoursun@naver.com" />
       </div>
       <table>
         <caption>page info</caption>

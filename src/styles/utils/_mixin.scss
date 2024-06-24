@@ -9,7 +9,7 @@
         @content;
       }
     }
-    @else if $breakpoint == Laptop {
+    @else if $breakpoint == laptop {
       @media all and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
         @content;
       }
