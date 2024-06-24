@@ -37,6 +37,8 @@ function Detail() {
               color={project.color}
               subColor={project.subColor}
               icon={project.icon}
+              nameAbbr={project.nameAbbr}
+              imageCount={project.imageCount}
             />
           ))}
         {/* </>

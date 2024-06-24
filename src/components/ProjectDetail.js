@@ -10,8 +10,9 @@ function ProjectDetail({
   period,
   client,
   name,
-  image,
   description,
+  nameAbbr,
+  imageCount,
   descriptions,
   skill,
   keyword,
@@ -22,6 +23,7 @@ function ProjectDetail({
   icon,
 }) {
   const IconComponent = Icons[icon];
+  const images = Array.from({ length: imageCount }, (_, index) => `img_${nameAbbr}_${index + 1}.png`);
 
   return (
     <>
@@ -49,11 +51,11 @@ function ProjectDetail({
         </div>
       </div>
       <ul className="grid">
-        {image.map((j) => (
-          <li key={j}>
-            <img src={`../images/detail/${j}`} alt={`${name} 상세 이미지`} />
-          </li>
-        ))}
+        {images.map((j) => (
+            <li key={j}>
+              <img src={`../images/detail/${j}`} alt={`${name} 상세 이미지`} />
+            </li>
+          ))}
       </ul>
     </>
   );
