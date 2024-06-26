@@ -70,9 +70,11 @@ function Project({
             : description}
         </p>
         <div>
-          <Link to={demo} target="_blank" className="btn_site">
-            <HouseDoorFill className="icon" />
-          </Link>
+          {demo && (
+            <Link to={demo} target="_blank" className="btn_site">
+              <HouseDoorFill className="icon" />
+            </Link>
+          )}
           <Link to={`detail/${id}`} className="btn_site">
             <ThreeDots className="icon" />
           </Link>
