@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/suntfolio/static/css/main.5ee345d8.css",
-    "main.js": "/suntfolio/static/js/main.7f824633.js",
+    "main.js": "/suntfolio/static/js/main.4b690eff.js",
     "static/media/PretendardVariable.ttf": "/suntfolio/static/media/PretendardVariable.c89dc775feed56569658.ttf",
     "static/media/LeeSeoyun.otf": "/suntfolio/static/media/LeeSeoyun.b413c78d93ee0670fcb4.otf",
     "static/media/bg_clouds.jpg": "/suntfolio/static/media/bg_clouds.7a8bbe3ce125ff2979cd.jpg",
@@ -9,10 +9,10 @@
     "static/media/img_mail.gif": "/suntfolio/static/media/img_mail.b46171b756bcfbafc3e0.gif",
     "index.html": "/suntfolio/index.html",
     "main.5ee345d8.css.map": "/suntfolio/static/css/main.5ee345d8.css.map",
-    "main.7f824633.js.map": "/suntfolio/static/js/main.7f824633.js.map"
+    "main.4b690eff.js.map": "/suntfolio/static/js/main.4b690eff.js.map"
   },
   "entrypoints": [
     "static/css/main.5ee345d8.css",
-    "static/js/main.7f824633.js"
+    "static/js/main.4b690eff.js"
   ]
 }
