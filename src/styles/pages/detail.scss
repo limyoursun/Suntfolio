@@ -6,9 +6,9 @@ main:has(.info) {
   display: flex;
   width: 100%;
   max-width: 1200px;
-  height: calc(100vh - 17rem);
-  margin: 11rem auto 0;
-  padding: 2rem;
+  height: calc(100vh - 18rem);
+  margin: 12rem auto 0;
+  padding-top: 4rem;
   gap: 3rem;
   @include respond-to(mobile) {
     flex-direction: column;
@@ -38,7 +38,7 @@ main:has(.info) {
     }
 
     * {
-      color: #fff;
+      color: #ffffff;
       font-weight: normal;
     }
 
@@ -58,6 +58,7 @@ main:has(.info) {
         word-break: keep-all;
         font-weight: bold;
         line-height: 100%;
+        white-space: pre-wrap;
 
         @include respond-to(mobile, tablet, laptop) {
           font-size: 3.2rem;
@@ -102,7 +103,7 @@ main:has(.info) {
     }
 
     &>div:last-child {
-      height: calc(100vh - 45rem);
+      height: calc(100% - 13rem);
       overflow-y: auto;
       letter-spacing: normal;
       letter-spacing: 1px;

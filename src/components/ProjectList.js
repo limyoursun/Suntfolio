@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 /* icon import */
 import {
   ThreeDots,
-  PersonArmsUp,
+  HeartPulseFill,
   BriefcaseFill,
   HouseDoorFill,
 } from "react-bootstrap-icons";
@@ -15,28 +15,18 @@ import CardSlide from "../components/CardSlide";
 import { useEffect } from "react";
 
 function Project({
-  id,
   category,
   period,
   client,
   name,
-  image,
-  image1,
-  image2,
-  image3,
+  nameAbbr,
   description,
-  description1,
-  description2,
-  description3,
-  skill,
-  keyword,
   demo,
-  github,
   color,
   subColor,
   icon
 }) {
-  const BadgeIcon = category === "개인" ? PersonArmsUp : BriefcaseFill;
+  const BadgeIcon = category === "개인" ? HeartPulseFill : BriefcaseFill;
   const IconComponent = Icons[icon];
 
   useEffect(() => {
@@ -46,7 +36,7 @@ function Project({
 
   return (
     <li
-      key="project.id"
+      key="project.nameAbbr"
       style={{ backgroundColor: `${color}`, borderColor: `${color}` }}
     >
       <span>{client}</span>
@@ -75,9 +65,11 @@ function Project({
               <HouseDoorFill className="icon" />
             </Link>
           )}
-          <Link to={`detail/${id}`} className="btn_site">
-            <ThreeDots className="icon" />
-          </Link>
+          {description && description.trim() !== 'WORK IN PROGRES' && (
+            <Link to={`detail/${nameAbbr}`} className="btn_site">
+              <ThreeDots className="icon" />
+            </Link>
+          )}
         </div>
       </div>
     </li>
