@@ -31,14 +31,10 @@ function Project({
 
   useEffect(() => {
     CardSlide();
-
   });
 
   return (
-    <li
-      key="project.nameAbbr"
-      style={{ backgroundColor: `${color}`, borderColor: `${color}` }}
-    >
+    <li style={{ backgroundColor: `${color}`, borderColor: `${color}` }}>
       <span>{client}</span>
       <div className="tumb">
         {IconComponent && <IconComponent style={{ color: `${subColor}` }} />}

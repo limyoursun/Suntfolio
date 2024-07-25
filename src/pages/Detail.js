@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 
 /* css import */
-import style from "../styles/pages/detail.scss";
+import "../styles/pages/detail.scss";
 import ProjectDetail from "../components/ProjectDetail";
 import Data from "../data/project.json";
 
