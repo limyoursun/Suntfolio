@@ -1,10 +1,20 @@
+import { useEffect } from "react";
+
 /* css import */
 import "../styles/pages/home.scss";
 /* component import */
+import CardSlide from "../components/CardSlide";
 import Project from "../components/ProjectList";
 import Data from "../data/project.json";
 
 function Home() {
+  useEffect(() => {
+    const cleanup = CardSlide();
+    return () => {
+      if (cleanup) cleanup();
+    };
+  }, []);
+  
   return (
     <div>
       <div className="gallery">

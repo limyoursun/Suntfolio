@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 /* icon import */
-import { HouseDoorFill } from "react-bootstrap-icons";
+import { ArrowUpRight } from "react-bootstrap-icons";
 
 function ProjectDetail({
   period,
@@ -24,7 +24,7 @@ function ProjectDetail({
           <h3>{name}</h3>
           {demo && (
             <Link to={demo} target="_blank" className="btn_site">
-              <HouseDoorFill className="icon" />
+              <ArrowUpRight className="icon" />
             </Link>
           )}
         </div>

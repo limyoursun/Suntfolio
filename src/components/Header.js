@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from './../assets/images/logo.gif';
 
 const Header = () => {
   return (
@@ -6,7 +7,7 @@ const Header = () => {
       <h1>
         <Link to="/">
           LIM + SUN 임선 포트폴리오
-          <img src="https://limyoursun.github.io/suntfolio/images/logo.gif" alt="임선 포트폴리오 로고" />
+          <img src={logo} alt="임선 포트폴리오 로고" />
         </Link>
       </h1>
     </header>

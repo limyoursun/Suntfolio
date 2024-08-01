@@ -5,14 +5,12 @@ import {
   ThreeDots,
   HeartPulseFill,
   BriefcaseFill,
-  HouseDoorFill,
+  ArrowUpRight,
 } from "react-bootstrap-icons";
 import * as Icons from "react-bootstrap-icons";
 
 /* component import */
 import BtnCircle from "../components/BtnCircle";
-import CardSlide from "../components/CardSlide";
-import { useEffect } from "react";
 
 function Project({
   category,
@@ -26,15 +24,12 @@ function Project({
   subColor,
   icon
 }) {
+
   const BadgeIcon = category === "개인" ? HeartPulseFill : BriefcaseFill;
   const IconComponent = Icons[icon];
 
-  useEffect(() => {
-    CardSlide();
-  });
-
   return (
-    <li style={{ backgroundColor: `${color}`, borderColor: `${color}` }}>
+    <li className="card" style={{ backgroundColor: `${color}`, borderColor: `${color}` }}>
       <span>{client}</span>
       <div className="tumb">
         {IconComponent && <IconComponent style={{ color: `${subColor}` }} />}
@@ -58,7 +53,7 @@ function Project({
         <div>
           {demo && (
             <Link to={demo} target="_blank" className="btn_site">
-              <HouseDoorFill className="icon" />
+              <ArrowUpRight className="icon" />
             </Link>
           )}
           {description && description.trim() !== 'WORK IN PROGRES' && (
