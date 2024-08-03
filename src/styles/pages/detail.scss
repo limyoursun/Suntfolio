@@ -6,12 +6,13 @@ main:has(.info) {
   display: flex;
   width: 100%;
   max-width: 1200px;
-  height: calc(100vh - 18rem);
+  height: calc(100vh - 19rem);
   margin: 12rem auto 0;
   padding-top: 4rem;
   gap: 3rem;
   @include respond-to(mobile) {
     flex-direction: column;
+    padding-top: 2.5rem;
   }
   * {
     font-size: 1.7rem;
@@ -24,7 +25,12 @@ main:has(.info) {
     position: relative;
     flex: 0 1 40%;
 
+    @include respond-to(mobile) {
+      padding:0 1rem;
+    }
+
     @include respond-to(tablet) {
+      padding:0 1rem;
       flex: 0 1 50%;
     }
 
