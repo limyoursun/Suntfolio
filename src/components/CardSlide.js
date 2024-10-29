@@ -175,8 +175,13 @@ const CardSlide = () => {
 
     const draggableInstances = Draggable.get(".drag-proxy");
     if (draggableInstances) {
-      draggableInstances.forEach(drag => drag.kill());
+      if (Array.isArray(draggableInstances)) {
+        draggableInstances.forEach(drag => drag.kill());
+      } else {
+        draggableInstances.kill();
+      }
     }
+
   };
 };
 

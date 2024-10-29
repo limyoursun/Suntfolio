@@ -1,5 +1,24 @@
 [
   {
+    "category":"개인",
+    "period":"2024.10",
+    "client":"개인작업",
+    "name":"2024 PORTFOLIO",
+    "nameAbbr":"portfolio2024",
+    "imageCount" : 6,
+    "description":"프로젝트와 관련된 더 많은 이야기를 담고자 새로 제작하게 된 2024년 포트폴리오입니다. 전체 퍼블리싱 및 디자인 작업하였습니다.",
+    "descriptions": [
+      "프로젝트의 상세 페이지에는 제 작업 방식을 더욱 효과적으로 전달하고자, 제가 참여했던 다양한 작업 히스토리를 최대한 상세하게 담아내고자 노력했습니다. 단순히 작업 결과물을 나열하는 것 뿐만 아니라 제가 맡은 역할과 작업 히스토리, img 태그의 경우 alt를 구체적으로 서술하여 보는 이들이 프로젝트의 배경을 이해할 수 있도록 하였습니다.",
+      "기존 포트폴리오와 비교했을 때, 프로젝트 작업물 이미지 표현에 특히 신경을 기울였습니다. GSAP의 ScrollTrigger 기능을 적극적으로 활용하여 페이지 스크롤에 따라 화면이 동적으로 변하는 효과에 집중했습니다.",
+      "PageSpeed Insights를 참고하여 웹 성능 향상에 대해 고민하게 되었고, Flow Text · Image Trail Effects 등의 애니메이션 효과들을 통해 가볍지만 생동감 넘치는 웹 사이트를 제작하고자 노력했습니다."
+    ],
+    "keyword": ["React", "gsap"],
+    "demo":"https://limyoursun.github.io/subfolio/",
+    "color":"#7f95e4",
+    "subColor":"#fbdedb",
+    "icon":"CloudSunFill"
+  },
+  {
     "category":"업무",
     "period":"2021.03 ✦ 2023.10",
     "client":"기상청",
